@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbufhnpdmtis1"]
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_c7exc"]
+
+[node name="SpriteComponent" type="Sprite2D"]
+z_index = 1
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendSpace2D_c7exc")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_position = Vector2(0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

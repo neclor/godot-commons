@@ -1,0 +1,22 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="My Commons"
+config/description="My frequently used scripts, systems and utilities for Godot."
+config/version="0.1.0"
+config/tags=PackedStringArray("addon")
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="uid://cehbrdhhakru0"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/neclor-commons/plugin.cfg")

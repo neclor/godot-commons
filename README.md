@@ -1,2 +1,2 @@
-# My Commons
-My frequently used scripts, systems and utilities for Godot
+# Commons
+Frequently used scripts, systems and utilities for Godot.
