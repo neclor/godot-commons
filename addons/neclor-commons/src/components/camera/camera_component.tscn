@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dxdofq3wesr6n"]
 
-[ext_resource type="Script" uid="uid://ccb5ewqiso2au" path="res://addons/neclor-commons/src/components/visual/camera/camera_component.gd" id="1_oksne"]
+[ext_resource type="Script" uid="uid://ccb5ewqiso2au" path="res://addons/neclor-commons/src/components/camera/camera_component.gd" id="1_oksne"]
 
 [node name="CameraComponent" type="Camera2D"]
 position_smoothing_enabled = true
