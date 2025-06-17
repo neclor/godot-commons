@@ -2,21 +2,46 @@ class_name StatComponent extends Node
 
 
 signal max_value_changed(max_value: int)
+signal on_zero()
+signal on_full(value: int)
 signal value_changed(value: int)
 signal value_decreased(amount: int)
 signal value_increased(amount: int)
-signal on_zero()
-signal on_full(value: int)
 
 
 @export_group("")
 @export_range(0, 100, 1, "or_greater") var max_value: int = 100:
 	get = get_max_value,
 	set = set_max_value
+func get_max_value() -> int:
+	return max_value
+func set_max_value(new_max_value: int) -> void:
+	var old_max_value: int = max_value
+	max_value = maxi(0, new_max_value)
+
+	if old_max_value == max_value: return
+
+	max_value_changed.emit(max_value)
+	var old_value: int = value
+	value = value
+	if old_value == value and value == max_value: on_full.emit(value)
+
+
 @export_range(0, 100, 1, "or_greater") var value: int = 100:
 	get = get_value,
 	set = set_value
 
+
+var is_full: bool = (value == 0):
+	get = get_is_full,
+	set = set_is_full
+var is_zero: bool = (value == 0):
+	get = get_is_zero,
+	set = set_is_zero
+
+
+func _static_init():
+	pass
 
 func _init(new_max_value: int = max_value, new_value: int = new_max_value) -> void:
 	max_value = new_max_value

@@ -28,7 +28,7 @@ folder_colors={
 "res://addons/neclor-commons/src/components/point_light/": "teal",
 "res://addons/neclor-commons/src/components/shadow/": "teal",
 "res://addons/neclor-commons/src/components/sprite/": "teal",
-"res://addons/neclor-commons/src/components/visual_container/": "teal"
+"res://addons/neclor-commons/src/components/visual_container/": "gray"
 }
 
 [rendering]

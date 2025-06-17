@@ -11,9 +11,9 @@ class_name MovementComponent extends Node
 @export_range(0, 100, 1, "or_greater", "hide_slider") var speed: float = 128:
 	get = get_speed,
 	set = set_speed
-@export_range(0, 100, 1, "or_greater", "hide_slider") var lerp_decay: float = 20:
-	get = get_lerp_decay,
-	set = set_lerp_decay
+@export_range(0, 100, 1, "or_greater", "hide_slider") var decay: float = 20:
+	get = get_decay,
+	set = set_decay
 
 
 var direction: Vector2 = Vector2.ZERO:
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	#TODO: add forces
 	#var step_acceleration: Vector2 = _force / mass * delta / 2
 
-	character_body.velocity = Math.exp_decay_vector2(character_body.velocity, direction * speed, lerp_decay, delta)
+	character_body.velocity = character_body.velocity.lerp(direction * speed, Math.decay_weight(decay, delta))
 	character_body.move_and_slide()
 
 	#_force = Vector2.ZERO
@@ -53,12 +53,12 @@ func set_speed(new_speed: float) -> void:
 	speed = maxf(0, new_speed)
 
 
-func get_lerp_decay() -> float:
-	return lerp_decay
+func get_decay() -> float:
+	return decay
 
 
-func set_lerp_decay(new_lerp_decay: float) -> void:
-	lerp_decay = maxf(0, new_lerp_decay)
+func set_decay(new_decay: float) -> void:
+	decay = maxf(0, new_decay)
 
 
 func get_direction() -> Vector2:

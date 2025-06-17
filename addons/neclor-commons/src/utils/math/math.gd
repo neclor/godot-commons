@@ -4,35 +4,18 @@ class_name Math extends Object
 ## Math utility library for common operations.
 
 
-## Third of [constant @GDScript.TAU], equals 120 degrees
+## Third of [constant @GDScript.TAU], equals 120 degrees.
 const THIRD_TAU: float = TAU / 3
-## Half of [constant @GDScript.PI], equals 90 degrees
+## Half of [constant @GDScript.PI], equals 90 degrees.
 const HALF_PI: float = PI / 2
-## One third of [constant @GDScript.PI], equals 60 degrees
+## Third of [constant @GDScript.PI], equals 60 degrees.
 const THIRD_PI: float = PI / 3
 
 
 #region Public
-#region Exp Decay
-## Smoothly interpolates a [param from] toward a [param to] using exponential decay.
-static func exp_decay(from: float, to: float, decay: float, delta: float) -> float:
-	return lerp(from, to, _calculate_lerp_weight(decay, delta))
-
-
-## Smoothly interpolates a [param from] toward a [param to] using exponential decay.
-static func exp_decay_vector2(from: Vector2, to: Vector2, decay: float, delta: float) -> Vector2:
-	return from.lerp(to, _calculate_lerp_weight(decay, delta))
-
-
-## Smoothly interpolates a [param from] toward a [param to] using exponential decay.
-static func exp_decay_vector3(from: Vector3, to: Vector3, decay: float, delta: float) -> Vector3:
-	return from.lerp(to, _calculate_lerp_weight(decay, delta))
-
-
-## Smoothly interpolates a [param from] toward a [param to] using exponential decay.
-static func exp_decay_vector4(from: Vector4, to: Vector4, decay: float, delta: float) -> Vector4:
-	return from.lerp(to, _calculate_lerp_weight(decay, delta))
-#endregion
+## Calculates a frame-rate-independent interpolation weight using the exponential decay formula: [code]1 - exp(-decay * delta)[/code]
+static func decay_weight(decay: float, delta: float) -> float:
+	return 1 - exp(-decay * delta)
 
 
 #region Array
@@ -69,10 +52,9 @@ static func vector4_from_vector2(from: Vector2) -> Vector4:
 static func vector4_from_vector3(from: Vector3) -> Vector4:
 	return Vector4(from.x, from.y, from.z, 0)
 #endregion
-#endregion
 
 
-#region Private
-static func _calculate_lerp_weight(decay: float, delta: float) -> float:
-	return 1 - exp(-decay * delta)
+## Wraps the [param angle] between -PI and PI ([constant @GDScript.PI]).
+static func wrap_angle(angle: float) -> float:
+	return wrapf(angle, -PI, PI)
 #endregion
