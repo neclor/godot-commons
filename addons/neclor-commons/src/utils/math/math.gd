@@ -4,6 +4,7 @@ class_name Math extends Object
 ## Math utility library for common operations.
 
 
+const EPSILON: float = 1e-5
 ## Third of [constant @GDScript.TAU], equals 120 degrees.
 const THIRD_TAU: float = TAU / 3
 ## Half of [constant @GDScript.PI], equals 90 degrees.
@@ -13,9 +14,15 @@ const THIRD_PI: float = PI / 3
 
 
 #region Public
-## Calculates a frame-rate-independent interpolation weight using the exponential decay formula: [code]1 - exp(-decay * delta)[/code]
+## Calculates a frame-rate-independent interpolation weight using the exponential decay formula: [code]1 - exp(-decay * delta)[/code].
 static func decay_weight(decay: float, delta: float) -> float:
 	return 1 - exp(-decay * delta)
+
+
+## Returns true if [param a] and [param b] are approximately equal to each other.
+static func is_equal_approx_epsilon(a: float, b: float, epsilon: float = EPSILON) -> bool:
+	if a == b: return true
+	return abs(a - b) <= epsilon
 
 
 #region Array
@@ -33,6 +40,14 @@ static func mul_array(array: Array, x: float) -> Array:
 
 
 #region Vector
+## Returns an isometric vector pointing in the same direction. Equivalent to [code](v * Vector2(1, 2)).normalized() / Vector2(1, 2)[/code].
+## [codeblock lang=gdscript]
+## Math.normalized_isometric_vector2(Vector2(1, 1)) # Returns (0.447214, 0.447214)
+## [/codeblock]
+static func normalized_isometric_vector2(from: Vector2) -> Vector2:
+	return (from * Vector2(1, 2)).normalized() / Vector2(1, 2)
+
+
 ## Constructs a new [b]Vector2[/b] from [param Vector4].
 static func vector2_from_vector4(from: Vector4) -> Vector2:
 	return Vector2(from.x, from.y)
@@ -54,7 +69,14 @@ static func vector4_from_vector3(from: Vector3) -> Vector4:
 #endregion
 
 
-## Wraps the [param angle] between -PI and PI ([constant @GDScript.PI]).
+#region Angle
+## Wraps the [param angle] between [code]-PI[/code] and [code]PI[/code] ([constant @GDScript.PI]).
 static func wrap_angle(angle: float) -> float:
 	return wrapf(angle, -PI, PI)
+
+
+## Wraps the [param angle_degrees] between [code]-180[/code] and [code]180[/code].
+static func wrap_angle_degrees(angle_degrees: float) -> float:
+	return wrapf(angle_degrees, -180, 180)
+#endregion
 #endregion

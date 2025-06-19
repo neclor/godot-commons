@@ -21,14 +21,11 @@ remote_path = NodePath("../../Sprite2D")
 update_scale = false
 
 [node name="Node2D2" type="Node2D" parent="."]
-script = ExtResource("2_8a8pi")
-lerp_decay = null
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D2"]
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("3_65205")
 
 [node name="RotationComponent" type="Node2D" parent="."]
 script = ExtResource("2_8a8pi")
-lerp_decay = null
 metadata/_custom_type_script = "uid://drala4w8dpcms"
+
+[node name="Sprite2D2" type="Sprite2D" parent="RotationComponent"]
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("3_65205")

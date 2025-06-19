@@ -3,15 +3,5 @@ extends EditorScript
 
 
 func _run() -> void:
-	pass
-	for x in 20:
-		print(randi_range(10, 3))
-	
-	var stat: StatComponent = HealthComponent.new()
-	var class_val: Object = StatComponent
-
-	if stat is StatComponent:
-		print("status")
-	else:
-		print("nooo")
-	
+	print(Math.normalized_isometric_vector2(Vector2(1, 1)))
+	print(Math.is_equal_approx_epsilon(INF, INF))
