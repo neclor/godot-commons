@@ -1,4 +1,4 @@
-class_name CameraComponent extends Camera2D
+class_name CameraSceneComponent extends Camera2D
 
 
 @export_group("Zoom")

@@ -14,7 +14,8 @@ const THIRD_PI: float = PI / 3
 
 
 #region Public
-## Calculates a frame-rate-independent interpolation weight using the exponential decay formula: [code]1 - exp(-decay * delta)[/code].
+## Calculates a frame-rate-independent interpolation weight using the exponential decay formula: [code]1 - exp(-decay * delta)[/code]. [br]
+## At [param decay] = 3, [method lerp] will cover 95% in about 1 second.
 static func decay_weight(decay: float, delta: float) -> float:
 	return 1 - exp(-decay * delta)
 
@@ -77,6 +78,6 @@ static func wrap_angle(angle: float) -> float:
 
 ## Wraps the [param angle_degrees] between [code]-180[/code] and [code]180[/code].
 static func wrap_angle_degrees(angle_degrees: float) -> float:
-	return wrapf(angle_degrees, -180, 180)
+	return rad_to_deg(wrap_angle(deg_to_rad(angle_degrees)))
 #endregion
 #endregion

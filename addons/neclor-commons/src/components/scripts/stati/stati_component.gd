@@ -57,22 +57,6 @@ func set_value(new_value: int) -> void:
 #endregion
 
 
-func is_full() -> bool:
-	return value == max_value
-
-
-func is_zero() -> bool:
-	return value == 0
-
-
-func set_value_to_max() -> void:
-	value = max_value
-
-
-func set_value_to_zero() -> void:
-	value = 0
-
-
 func decrease_max_value(amount: int) -> int:
 	var old_max_value: int = max_value
 	max_value -= amount
@@ -95,3 +79,19 @@ func increase_value(amount: int) -> int:
 	var old_value: int = value
 	value += amount
 	return value - old_value
+
+
+func is_full() -> bool:
+	return value == max_value
+
+
+func is_zero() -> bool:
+	return value == 0
+
+
+func set_value_to_max() -> void:
+	value = max_value
+
+
+func set_value_to_zero() -> void:
+	value = 0

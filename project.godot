@@ -17,6 +17,10 @@ config/tags=PackedStringArray("addon")
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://cehbrdhhakru0"
 
+[dotnet]
+
+project/assembly_name="Commons"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/neclor-commons/plugin.cfg")
@@ -24,11 +28,11 @@ enabled=PackedStringArray("res://addons/neclor-commons/plugin.cfg")
 [file_customization]
 
 folder_colors={
-"res://addons/neclor-commons/src/components/camera/": "teal",
-"res://addons/neclor-commons/src/components/point_light/": "teal",
-"res://addons/neclor-commons/src/components/shadow/": "teal",
-"res://addons/neclor-commons/src/components/sprite/": "teal",
-"res://addons/neclor-commons/src/components/visual_container/": "gray"
+"res://addons/neclor-commons/assets/": "yellow",
+"res://addons/neclor-commons/src/components/scenes/": "teal",
+"res://addons/neclor-commons/src/components/scripts/visual_container/": "gray",
+"res://addons/neclor-commons/src/templates/": "blue",
+"res://addons/neclor-commons/src/utils/": "orange"
 }
 
 [rendering]

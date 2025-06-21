@@ -11,7 +11,7 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
 
-[node name="PointLightComponent" type="PointLight2D"]
+[node name="PointLightSceneComponent" type="PointLight2D"]
 color = Color(1, 0.784314, 0.145098, 1)
 range_item_cull_mask = 3
 shadow_enabled = true
