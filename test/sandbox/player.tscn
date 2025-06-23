@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8c6gdysopdng"]
+
+[ext_resource type="Script" uid="uid://y1uixca2kvms" path="res://addons/neclor-commons/src/components/scripts/input/input_component.gd" id="1_qqgw4"]
+[ext_resource type="Script" uid="uid://bh467f4lvbdgk" path="res://addons/neclor-commons/src/components/scripts/movement/top_down/top_down_character_movement_component.gd" id="2_wvbbu"]
+[ext_resource type="PackedScene" uid="uid://bg444ytatrfp3" path="res://addons/neclor-commons/src/components/scenes/camera/camera_scene_component.tscn" id="3_wvbbu"]
+[ext_resource type="PackedScene" uid="uid://dbufhnpdmtis1" path="res://addons/neclor-commons/src/components/scenes/sprite/sprite_scene_component.tscn" id="4_f04xs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jp3oe"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wvbbu"]
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jp3oe")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 10, 7, 7, 10, 0, 7, -7, 0, -10, -7, -7, -10, 0, -7, 7)
+
+[node name="InputComponent" type="Node" parent="."]
+script = ExtResource("1_qqgw4")
+metadata/_custom_type_script = "uid://y1uixca2kvms"
+
+[node name="TopDownCharacterMovementComponent" type="Node" parent="." node_paths=PackedStringArray("character_body")]
+script = ExtResource("2_wvbbu")
+character_body = NodePath("..")
+metadata/_custom_type_script = "uid://bh467f4lvbdgk"
+
+[node name="CameraSceneComponent" parent="." instance=ExtResource("3_wvbbu")]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_wvbbu")
+
+[node name="SpriteSceneComponent" parent="." instance=ExtResource("4_f04xs")]

@@ -18,9 +18,47 @@ signal value_increased(amount: int)
 	set = set_value
 
 
+var is_full: bool:
+	get = get_is_full
+var is_zero: bool:
+	get = get_is_zero
+
+
 func _init(new_max_value: int = max_value, new_value: int = new_max_value) -> void:
 	max_value = new_max_value
 	value = new_value
+
+
+func decrease_max_value(amount: int) -> int:
+	var old_max_value: int = max_value
+	max_value -= amount
+	return old_max_value - max_value
+
+
+func increase_max_value(amount: int) -> int:
+	var old_max_value: int = max_value
+	max_value += amount
+	return max_value - old_max_value
+
+
+func decrease_value(amount: int) -> int:
+	var old_value: int = value
+	value -= amount
+	return old_value - value
+
+
+func increase_value(amount: int) -> int:
+	var old_value: int = value
+	value += amount
+	return value - old_value
+
+
+func set_value_to_max() -> void:
+	value = max_value
+
+
+func set_value_to_zero() -> void:
+	value = 0
 
 
 #region Setters And Getters
@@ -52,46 +90,14 @@ func set_value(new_value: int) -> void:
 	value_changed.emit(value)
 	if difference > 0: value_increased.emit(difference)
 	else: value_decreased.emit(-difference)
-	if is_full(): on_full.emit(value)
-	if is_zero(): on_zero.emit()
-#endregion
+	if is_full: on_full.emit(value)
+	if is_zero: on_zero.emit()
 
 
-func decrease_max_value(amount: int) -> int:
-	var old_max_value: int = max_value
-	max_value -= amount
-	return old_max_value - max_value
-
-
-func increase_max_value(amount: int) -> int:
-	var old_max_value: int = max_value
-	max_value += amount
-	return max_value - old_max_value
-
-
-func decrease_value(amount: int) -> int:
-	var old_value: int = value
-	value -= amount
-	return old_value - value
-
-
-func increase_value(amount: int) -> int:
-	var old_value: int = value
-	value += amount
-	return value - old_value
-
-
-func is_full() -> bool:
+func get_is_full() -> bool:
 	return value == max_value
 
 
-func is_zero() -> bool:
+func get_is_zero() -> bool:
 	return value == 0
-
-
-func set_value_to_max() -> void:
-	value = max_value
-
-
-func set_value_to_zero() -> void:
-	value = 0
+#endregion

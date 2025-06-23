@@ -1,7 +1,7 @@
 class_name RotationComponent extends Node2D
 
 
-signal desired_rotation_reached()
+signal desired_rotation_reached
 
 
 enum RotationMode {
@@ -35,16 +35,23 @@ var desired_rotation: float = Math.wrap_angle(rotation):
 	set = set_desired_rotation
 
 
+var is_at_desired_rotation: bool:
+	get = get_is_at_desired_rotation
+
+
 func _physics_process(delta: float) -> void:
-	desired_rotation_look_at(get_global_mouse_position())
-	if is_at_desired_rotation(): return
+	if is_at_desired_rotation: return
 	match rotation_mode:
 		RotationMode.LERP: _lerp_physics_process(delta)
 		RotationMode.LINEAR: _linear_physics_process(delta)
 		RotationMode.DISABLED: return
 		_: return
 
-	if is_at_desired_rotation(): desired_rotation_reached.emit()
+	if is_at_desired_rotation: desired_rotation_reached.emit()
+
+
+func desired_rotation_look_at(global_point: Vector2) -> void:
+	global_desired_rotation = global_position.angle_to_point(global_point)
 
 
 #region Setters And Getters
@@ -92,15 +99,11 @@ func get_desired_rotation() -> float:
 
 func set_desired_rotation(new_desired_rotation: float) -> void:
 	desired_rotation = Math.wrap_angle(new_desired_rotation)
-#endregion
 
 
-func is_at_desired_rotation() -> bool:
+func get_is_at_desired_rotation() -> bool:
 	return is_equal_approx(rotation, desired_rotation)
-
-
-func desired_rotation_look_at(global_point: Vector2) -> void:
-	global_desired_rotation = global_position.angle_to_point(global_point)
+#endregion
 
 
 func _lerp_physics_process(delta: float) -> void:

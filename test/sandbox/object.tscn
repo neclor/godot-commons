@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgtwa7pnwhmns"]
+
+[ext_resource type="Script" uid="uid://qw2y7hj2phuv" path="res://test/sandbox/object.gd" id="1_jv2la"]
+[ext_resource type="Texture2D" uid="uid://c5jqh4t2qhedq" path="res://addons/neclor-commons/assets/sprites/test_texture.png" id="2_8ur18"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mf1n"]
+size = Vector2(16, 16)
+
+[node name="Object" type="RigidBody2D"]
+gravity_scale = 0.0
+linear_damp = 3.0
+script = ExtResource("1_jv2la")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8mf1n")
+
+[node name="TestTexture" type="Sprite2D" parent="."]
+texture = ExtResource("2_8ur18")

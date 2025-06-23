@@ -1,6 +1,9 @@
 class_name CameraSceneComponent extends Camera2D
 
 
+static var SCENE_PATH = "res://scenes/Player.tscn"
+
+
 @export_group("Zoom")
 @export var min_zoom: Vector2 = Vector2(1, 1):
 	get = get_min_zoom,
@@ -15,6 +18,10 @@ class_name CameraSceneComponent extends Camera2D
 @export_range(0, 1, 0.01) var _mouse_drag_top_margin: float = 0.5
 @export_range(0, 1, 0.01) var _mouse_drag_right_margin: float = 0.5
 @export_range(0, 1, 0.01) var _mouse_drag_bottom_margin: float = 0.5
+
+
+static func new() -> CameraSceneComponent:
+	return preload("res://addons/neclor-commons/src/components/scenes/camera/camera_scene_component.tscn").instantiate()
 
 
 func _init() -> void:

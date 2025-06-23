@@ -1,7 +1,7 @@
 class_name InputComponent extends Node
 
 
-signal input_direction_changed(direction: Vector2)
+signal direction_changed(direction: Vector2)
 signal scrolled_up
 signal scrolled_down
 signal accepted
@@ -13,26 +13,46 @@ signal pressed_menu
 
 
 enum Action {
-	MOVE_LEFT,
-	MOVE_RIGHT,
-	MOVE_UP,
-	MOVE_DOWN,
-	SCROLL_UP,
-	SCROLL_DOWN,
-	ACCEPT,
-	SELECT,
-	CANCEL,
+	LEFT,
+	RIGHT,
+	UP,
+	DOWN,
+	ROTATE_CLOCKWISE,
+	ROTATE_COUNTERCLOCKWISE,
+
+	ABILITY,
+	ABILITY_2,
+	ABILITY_3,
+
+	RUN,
+	
+	ATTACK,
+	RELOAD,
+
 	USE,
 	INVENTORY,
 	MENU,
+
+	SCROLL_UP,
+	SCROLL_DOWN,
+	NEXT,
+	PREV,
+	ACCEPT,
+	SELECT,
+	CANCEL,
 }
 
 
-@export var action_name: Dictionary[Action, String] = {
-	Action.MOVE_LEFT: "move_left",
-	Action.MOVE_RIGHT: "move_right",
-	Action.MOVE_UP: "move_up",
-	Action.MOVE_DOWN: "move_down",
+@export var enabled: bool = true#:
+	#TODO
+	#get = get_enabled,
+	#set = set_enabled
+
+@export var action_names: Dictionary[Action, String] = {
+	Action.LEFT: "left",
+	Action.RIGHT: "right",
+	Action.UP: "up",
+	Action.DOWN: "down",
 	Action.SCROLL_UP: "scroll_up",
 	Action.SCROLL_DOWN: "scroll_down",
 	Action.ACCEPT: "accept",
@@ -42,6 +62,7 @@ enum Action {
 	Action.INVENTORY: "inventory",
 	Action.MENU: "menu",
 }
+#TODO
 
 
 var input_direction: Vector2:
@@ -50,21 +71,28 @@ var _input_direction: Vector2 = Vector2.ZERO
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	_check_input_direction()
-	if event.is_action_pressed(action_name.get(Action.SCROLL_UP, "")): scrolled_up.emit()
-	elif event.is_action_pressed(action_name.get(Action.SCROLL_DOWN, "")): scrolled_down.emit()
+	if _check_input_direction(): return
+	elif event.is_action_pressed(_action_name(Action.SCROLL_UP)): scrolled_up.emit()
+	#elif event.is_action_pressed(_action_name(Action.SCROLL_DOWN)): scrolled_down.emit()
 
 
+#region Setters And Getters
 func get_input_direction() -> Vector2:
 	return _input_direction
+#endregion
 
 
-func _check_input_direction() -> void:
+func _check_input_direction() -> bool:
 	var new_input_direction: Vector2 = Vector2(
-		Input.get_axis(action_name.get(Action.MOVE_LEFT, ""), action_name.get(Action.MOVE_RIGHT, "")),
-		Input.get_axis(action_name.get(Action.MOVE_UP, ""), action_name.get(Action.MOVE_DOWN, ""))
+		Input.get_axis(_action_name(Action.LEFT), _action_name(Action.RIGHT)),
+		Input.get_axis(_action_name(Action.UP), _action_name(Action.DOWN))
 	)
-	if new_input_direction == _input_direction: return
+	if _input_direction == new_input_direction: return false
 
 	_input_direction = new_input_direction
-	input_direction_changed.emit(_input_direction)
+	direction_changed.emit(_input_direction)
+	return true
+
+
+func _action_name(action: Action) -> String:
+	return action_names.get(action, "")
