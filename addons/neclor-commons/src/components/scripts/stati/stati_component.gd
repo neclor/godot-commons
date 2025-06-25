@@ -1,10 +1,10 @@
 class_name StatiComponent extends Node
 
 
-signal max_value_changed(max_value: int)
+signal max_value_changed(new_max_value: int)
 signal on_full(value: int)
 signal on_zero()
-signal value_changed(value: int)
+signal value_changed(new_value: int)
 signal value_decreased(amount: int)
 signal value_increased(amount: int)
 

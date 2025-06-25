@@ -37,6 +37,7 @@ enabled=PackedStringArray("res://addons/neclor-commons/plugin.cfg")
 folder_colors={
 "res://addons/neclor-commons/assets/": "yellow",
 "res://addons/neclor-commons/src/components/scenes/": "teal",
+"res://addons/neclor-commons/src/components/scripts/base/": "orange",
 "res://addons/neclor-commons/src/components/scripts/visual_container/": "gray",
 "res://addons/neclor-commons/src/templates/": "blue",
 "res://addons/neclor-commons/src/utils/": "orange"

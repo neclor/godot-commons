@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8c6gdysopdng"]
+[gd_scene load_steps=9 format=3 uid="uid://b8c6gdysopdng"]
 
 [ext_resource type="Script" uid="uid://y1uixca2kvms" path="res://addons/neclor-commons/src/components/scripts/input/input_component.gd" id="1_qqgw4"]
-[ext_resource type="Script" uid="uid://bh467f4lvbdgk" path="res://addons/neclor-commons/src/components/scripts/movement/top_down/top_down_character_movement_component.gd" id="2_wvbbu"]
+[ext_resource type="Script" uid="uid://bh467f4lvbdgk" path="res://addons/neclor-commons/src/components/scripts/transform/move/character_2d/top_down_character_movement_component.gd" id="2_wvbbu"]
 [ext_resource type="PackedScene" uid="uid://bg444ytatrfp3" path="res://addons/neclor-commons/src/components/scenes/camera/camera_scene_component.tscn" id="3_wvbbu"]
+[ext_resource type="Script" uid="uid://drala4w8dpcms" path="res://addons/neclor-commons/src/components/scripts/transform/rotation/rotation_2d_component.gd" id="4_eyhaa"]
 [ext_resource type="PackedScene" uid="uid://dbufhnpdmtis1" path="res://addons/neclor-commons/src/components/scenes/sprite/sprite_scene_component.tscn" id="4_f04xs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jp3oe"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wvbbu"]
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_eyhaa"]
+modification_count = 1
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -22,14 +26,22 @@ polygon = PackedVector2Array(0, 10, 7, 7, 10, 0, 7, -7, 0, -10, -7, -7, -10, 0, 
 script = ExtResource("1_qqgw4")
 metadata/_custom_type_script = "uid://y1uixca2kvms"
 
-[node name="TopDownCharacterMovementComponent" type="Node" parent="." node_paths=PackedStringArray("character_body")]
-script = ExtResource("2_wvbbu")
-character_body = NodePath("..")
-metadata/_custom_type_script = "uid://bh467f4lvbdgk"
-
 [node name="CameraSceneComponent" parent="." instance=ExtResource("3_wvbbu")]
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_wvbbu")
 
 [node name="SpriteSceneComponent" parent="." instance=ExtResource("4_f04xs")]
+
+[node name="RotationComponent" type="Node2D" parent="."]
+script = ExtResource("4_eyhaa")
+metadata/_custom_type_script = "uid://drala4w8dpcms"
+
+[node name="TopDownCharacter2DMoveComponent" type="Node" parent="."]
+script = ExtResource("2_wvbbu")
+metadata/_custom_type_script = "uid://bh467f4lvbdgk"
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+modification_stack = SubResource("SkeletonModificationStack2D_eyhaa")
+
+[connection signal="direction_changed" from="InputComponent" to="TopDownCharacter2DMoveComponent" method="activate"]

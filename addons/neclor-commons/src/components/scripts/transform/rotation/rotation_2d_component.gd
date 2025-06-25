@@ -1,4 +1,4 @@
-class_name RotationComponent extends Node2D
+class_name Rotation2DComponent extends IActivalableComponentNode2D
 
 
 signal desired_rotation_reached
@@ -15,22 +15,18 @@ enum RotationMode {
 @export var rotation_mode: RotationMode = RotationMode.LERP:
 	get = get_rotation_mode,
 	set = set_rotation_mode
-
-@export_group("Lerp")
+@export_range(0, 100, 0.01, "or_greater") var rotation_speed: float = PI:
+	get = get_rotation_speed,
+	set = set_rotation_speed
 @export_range(0, 100, 1, "or_greater", "hide_slider") var decay: float = 20:
 	get = get_decay,
 	set = set_decay
-
-@export_group("Linear")
-@export_range(0, 100, 0.01, "or_greater", "hide_slider") var rotation_speed: float = PI:
-	get = get_rotation_speed,
-	set = set_rotation_speed
 
 
 var global_desired_rotation: float:
 	get = get_global_desired_rotation,
 	set = set_global_desired_rotation
-var desired_rotation: float = Math.wrap_angle(rotation):
+var desired_rotation: float = Utils.Angle.wrap_angle(rotation):
 	get = get_desired_rotation,
 	set = set_desired_rotation
 
@@ -40,7 +36,7 @@ var is_at_desired_rotation: bool:
 
 
 func _physics_process(delta: float) -> void:
-	if is_at_desired_rotation: return
+	if not active or is_at_desired_rotation: return
 	match rotation_mode:
 		RotationMode.LERP: _lerp_physics_process(delta)
 		RotationMode.LINEAR: _linear_physics_process(delta)
@@ -63,14 +59,6 @@ func set_rotation_mode(new_rotation_mode: RotationMode) -> void:
 	rotation_mode = new_rotation_mode
 
 
-func get_decay() -> float:
-	return decay
-
-
-func set_decay(new_decay: float) -> void:
-	decay = maxf(0, new_decay)
-
-
 func get_rotation_speed() -> float:
 	return rotation_speed
 
@@ -79,10 +67,18 @@ func set_rotation_speed(new_rotation_speed: float) -> void:
 	rotation_speed = maxf(0, new_rotation_speed)
 
 
+func get_decay() -> float:
+	return decay
+
+
+func set_decay(new_decay: float) -> void:
+	decay = maxf(0, new_decay)
+
+
 func get_global_desired_rotation() -> float:
 	var parent: Node = get_parent()
 	if parent == null or parent is not Node2D: return desired_rotation
-	return Math.wrap_angle(parent.global_rotation + desired_rotation)
+	return Utils.Angle.wrap_angle(parent.global_rotation + desired_rotation)
 
 
 func set_global_desired_rotation(new_global_desired_rotation: float) -> void:
@@ -98,7 +94,7 @@ func get_desired_rotation() -> float:
 
 
 func set_desired_rotation(new_desired_rotation: float) -> void:
-	desired_rotation = Math.wrap_angle(new_desired_rotation)
+	desired_rotation = Utils.Angle.wrap_angle(new_desired_rotation)
 
 
 func get_is_at_desired_rotation() -> bool:
@@ -107,8 +103,8 @@ func get_is_at_desired_rotation() -> bool:
 
 
 func _lerp_physics_process(delta: float) -> void:
-	rotation = Math.wrap_angle(lerp_angle(rotation, desired_rotation, Math.decay_weight(decay, delta)))
+	rotation = Utils.Angle.wrap_angle(lerp_angle(rotation, desired_rotation, Utils.Math.decay_weight(decay, delta)))
 
 
 func _linear_physics_process(delta: float) -> void:
-	rotation = Math.wrap_angle(rotate_toward(rotation, desired_rotation, rotation_speed * delta))
+	rotation = Utils.Angle.wrap_angle(rotate_toward(rotation, desired_rotation, rotation_speed * delta))

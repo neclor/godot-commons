@@ -1,7 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://6x6qh73m6x74"]
+[gd_scene load_steps=5 format=3 uid="uid://6x6qh73m6x74"]
 
-[ext_resource type="PackedScene" uid="uid://b8c6gdysopdng" path="res://test/sandbox/player.tscn" id="1_5vs4c"]
+[ext_resource type="Texture2D" uid="uid://bsi6ksj8ixlf2" path="res://addons/neclor-commons/assets/sprites/test_texture.png" id="1_mr2tf"]
+[ext_resource type="Script" uid="uid://ci2evw0deo4n6" path="res://test/sandbox/tile_map_layer.gd" id="2_mr2tf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu2rc"]
+texture = ExtResource("1_mr2tf")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qivky"]
+sources/0 = SubResource("TileSetAtlasSource_vu2rc")
 
 [node name="Test" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_5vs4c")]
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_qivky")
+script = ExtResource("2_mr2tf")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.6156863, 1, 0.7647059, 1)
+polygon = PackedVector2Array(0, 4, 4, 0, 0, -4, -4, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,4 +1,4 @@
-class_name InputComponent extends Node
+class_name InputComponent extends ActiveNodeComponent
 
 
 signal direction_changed(direction: Vector2)
@@ -13,12 +13,20 @@ signal pressed_menu
 
 
 enum Action {
+	FIRST,
+	SECOND, 
+	THIRD, 
+	FOURTH, 
+	FIFTH,
+	SIXTH,
+
 	LEFT,
 	RIGHT,
 	UP,
 	DOWN,
-	ROTATE_CLOCKWISE,
-	ROTATE_COUNTERCLOCKWISE,
+
+	#ROTATE_CLOCKWISE,
+	#ROTATE_COUNTERCLOCKWISE,
 
 	ABILITY,
 	ABILITY_2,
@@ -27,6 +35,7 @@ enum Action {
 	RUN,
 	
 	ATTACK,
+	MELEE_ATTACK,
 	RELOAD,
 
 	USE,
@@ -43,10 +52,7 @@ enum Action {
 }
 
 
-@export var enabled: bool = true#:
-	#TODO
-	#get = get_enabled,
-	#set = set_enabled
+
 
 @export var action_names: Dictionary[Action, String] = {
 	Action.LEFT: "left",
@@ -63,6 +69,8 @@ enum Action {
 	Action.MENU: "menu",
 }
 #TODO
+
+
 
 
 var input_direction: Vector2:
