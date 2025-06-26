@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg444ytatrfp3"]
+
+[ext_resource type="Script" uid="uid://ccb5ewqiso2au" path="res://addons/neclor-commons/src/components/scenes/camera/camera_2d_scene_component.gd" id="1_udval"]
+
+[node name="Camera2DSceneComponent" type="Camera2D"]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("1_udval")

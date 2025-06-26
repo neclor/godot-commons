@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://6x6qh73m6x74"]
 
-[ext_resource type="Texture2D" uid="uid://bsi6ksj8ixlf2" path="res://addons/neclor-commons/assets/sprites/test_texture.png" id="1_mr2tf"]
+[ext_resource type="Texture2D" uid="uid://bsi6ksj8ixlf2" path="res://addons/neclor-commons/assets/sprites/utils/test_texture.png" id="1_mr2tf"]
 [ext_resource type="Script" uid="uid://ci2evw0deo4n6" path="res://test/sandbox/tile_map_layer.gd" id="2_mr2tf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu2rc"]

@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://45uj48kmy6cl"
+path="res://.godot/imported/._WhitePeaberry.fnt-a3fc2263fd791e22fdae07d623603c8c.fontdata"
+
+[deps]
+
+source_file="res://addons/neclor-commons/assets/fonts/Peaberry-Font-v2.0/__MACOSX/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/1. WhitePeaberry/WhitePeaberry.fnt (BMFont Text)/._WhitePeaberry.fnt"
+dest_files=["res://.godot/imported/._WhitePeaberry.fnt-a3fc2263fd791e22fdae07d623603c8c.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

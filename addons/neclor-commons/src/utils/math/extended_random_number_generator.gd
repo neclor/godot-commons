@@ -35,10 +35,10 @@ func rand_vector3i_range(from: Vector3i, to: Vector3i) -> Vector3i:
 #region Vector4/Vector4i
 ## Returns a random [b]Vector4[/b] in the range [param from], [param to] (inclusive).
 func rand_vector4_range(from: Vector4, to: Vector4) -> Vector4:
-	return Vector4(randf_range(from.x, to.x), randf_range(from.y, to.y), randf_range(from.z, to.z), randf_range(from.w, to.w))
+	return Vector4(self.randf_range(from.x, to.x), self.randf_range(from.y, to.y), self.randf_range(from.z, to.z), self.randf_range(from.w, to.w))
 
 
 ## Returns a random [b]Vector4i[/b] in the range [param from], [param to] (inclusive).
 func rand_vector4i_range(from: Vector4i, to: Vector4i) -> Vector4i:
-	return Vector4i(randi_range(from.x, to.x), randi_range(from.y, to.y), randi_range(from.z, to.z), randi_range(from.w, to.w))
+	return Vector4i(self.randi_range(from.x, to.x), self.randi_range(from.y, to.y), self.randi_range(from.z, to.z), self.randi_range(from.w, to.w))
 #endregion

@@ -5,6 +5,7 @@ var rg: RoomGenerator = RoomGenerator.new()
 
 
 func _ready() -> void:
+	rg.seed = 293420333964102101
 	print(rg.seed)
 	var room: Grid = rg.generate()
 	

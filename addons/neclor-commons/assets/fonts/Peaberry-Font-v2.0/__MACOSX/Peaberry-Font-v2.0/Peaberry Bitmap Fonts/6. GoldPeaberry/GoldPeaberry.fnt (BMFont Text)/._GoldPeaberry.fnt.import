@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://4gnf1k4df5bp"
+path="res://.godot/imported/._GoldPeaberry.fnt-5d4b35b81f2a2c53e00aa6b5de85f287.fontdata"
+
+[deps]
+
+source_file="res://addons/neclor-commons/assets/fonts/Peaberry-Font-v2.0/__MACOSX/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/6. GoldPeaberry/GoldPeaberry.fnt (BMFont Text)/._GoldPeaberry.fnt"
+dest_files=["res://.godot/imported/._GoldPeaberry.fnt-5d4b35b81f2a2c53e00aa6b5de85f287.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

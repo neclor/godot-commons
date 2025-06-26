@@ -1,0 +1,1 @@
+class_name Sprite2DSceneComponent extends Sprite2D

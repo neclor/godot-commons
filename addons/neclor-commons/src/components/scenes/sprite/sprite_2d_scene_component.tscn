@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbufhnpdmtis1"]
+
+[ext_resource type="Script" uid="uid://dhw6v161xhfqn" path="res://addons/neclor-commons/src/components/scenes/sprite/sprite_2d_scene_component.gd" id="1_gji1u"]
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_qlup6"]
+
+[node name="Sprite2DSceneComponent" type="Sprite2D"]
+z_index = 1
+script = ExtResource("1_gji1u")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendSpace2D_qlup6")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_position = Vector2(-0.019780219, 0.5504886)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
