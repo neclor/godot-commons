@@ -1,0 +1,1 @@
+class_name IComponentNode2D extends Node2D

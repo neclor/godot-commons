@@ -1,4 +1,4 @@
-class_name IActivalableComponentNode extends ComponentNode
+class_name IActivalableComponentNode extends IComponentNode
 
 
 signal active_changed(active: bool)

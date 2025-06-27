@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4ork73murpcm"
-path="res://.godot/imported/test_texture.png-a107a88be904a33cd82559941df95e10.ctex"
+uid="uid://1tlhfge20bph"
+path="res://.godot/imported/crosshair16.png-ac7edc0febb56a47e83b17d5883bc2e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/utils/test_texture.png"
-dest_files=["res://.godot/imported/test_texture.png-a107a88be904a33cd82559941df95e10.ctex"]
+source_file="res://addons/neclor-commons/assets/sprites/cursors/crosshair16.png"
+dest_files=["res://.godot/imported/crosshair16.png-ac7edc0febb56a47e83b17d5883bc2e1.ctex"]
 
 [params]
 

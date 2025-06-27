@@ -1,5 +1,5 @@
 ﻿;paint.net Palette File
-;Palette Name: Normal Map 5
+;Palette Name: Normal Map 25
 ;Description: 
 FF000000
 FF404040

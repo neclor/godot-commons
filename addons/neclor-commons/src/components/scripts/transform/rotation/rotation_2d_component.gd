@@ -26,7 +26,7 @@ enum RotationMode {
 var global_desired_rotation: float:
 	get = get_global_desired_rotation,
 	set = set_global_desired_rotation
-var desired_rotation: float = Utils.Angle.wrap_angle(rotation):
+var desired_rotation: float = AngleUtils.wrap_angle(rotation):
 	get = get_desired_rotation,
 	set = set_desired_rotation
 
@@ -78,7 +78,7 @@ func set_decay(new_decay: float) -> void:
 func get_global_desired_rotation() -> float:
 	var parent: Node = get_parent()
 	if parent == null or parent is not Node2D: return desired_rotation
-	return Utils.Angle.wrap_angle(parent.global_rotation + desired_rotation)
+	return AngleUtils.wrap_angle(parent.global_rotation + desired_rotation)
 
 
 func set_global_desired_rotation(new_global_desired_rotation: float) -> void:
@@ -94,7 +94,7 @@ func get_desired_rotation() -> float:
 
 
 func set_desired_rotation(new_desired_rotation: float) -> void:
-	desired_rotation = Utils.Angle.wrap_angle(new_desired_rotation)
+	desired_rotation = AngleUtils.wrap_angle(new_desired_rotation)
 
 
 func get_is_at_desired_rotation() -> bool:
@@ -103,8 +103,8 @@ func get_is_at_desired_rotation() -> bool:
 
 
 func _lerp_physics_process(delta: float) -> void:
-	rotation = Utils.Angle.wrap_angle(lerp_angle(rotation, desired_rotation, Utils.Math.decay_weight(decay, delta)))
+	rotation = AngleUtils.wrap_angle(lerp_angle(rotation, desired_rotation, Math.decay_weight(decay, delta)))
 
 
 func _linear_physics_process(delta: float) -> void:
-	rotation = Utils.Angle.wrap_angle(rotate_toward(rotation, desired_rotation, rotation_speed * delta))
+	rotation = AngleUtils.wrap_angle(rotate_toward(rotation, desired_rotation, rotation_speed * delta))

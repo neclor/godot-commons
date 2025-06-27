@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4ork73murpcm"
-path="res://.godot/imported/test_texture.png-a107a88be904a33cd82559941df95e10.ctex"
+uid="uid://l0sul7kx2p28"
+path="res://.godot/imported/cursor32.png-f8d166570e37c6576caf28b1ac966310.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/utils/test_texture.png"
-dest_files=["res://.godot/imported/test_texture.png-a107a88be904a33cd82559941df95e10.ctex"]
+source_file="res://addons/neclor-commons/assets/sprites/cursors/cursor32.png"
+dest_files=["res://.godot/imported/cursor32.png-f8d166570e37c6576caf28b1ac966310.ctex"]
 
 [params]
 

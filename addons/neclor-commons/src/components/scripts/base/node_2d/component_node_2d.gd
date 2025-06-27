@@ -1,1 +1,0 @@
-class_name ComponentNode2D extends Node2D

@@ -1,4 +1,4 @@
-class_name InputComponent extends ActiveNodeComponent
+class_name InputComponent extends IActivalableComponentNode
 
 
 signal direction_changed(direction: Vector2)

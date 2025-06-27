@@ -1,4 +1,4 @@
-class_name StatiComponent extends Node
+class_name StatiComponent extends IComponentNode
 
 
 signal max_value_changed(new_max_value: int)
