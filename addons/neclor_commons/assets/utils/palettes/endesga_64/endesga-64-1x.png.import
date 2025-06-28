@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br4nc43f1422v"
-path="res://.godot/imported/endesga-64-1x.png-766ce64776fc76eb6bd05030748d395f.ctex"
+path="res://.godot/imported/endesga-64-1x.png-9f17af08ffcf8b47d2df14df98ec15e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/utils/palettes/endesga_64/endesga-64-1x.png"
-dest_files=["res://.godot/imported/endesga-64-1x.png-766ce64776fc76eb6bd05030748d395f.ctex"]
+source_file="res://addons/neclor_commons/assets/utils/palettes/endesga_64/endesga-64-1x.png"
+dest_files=["res://.godot/imported/endesga-64-1x.png-9f17af08ffcf8b47d2df14df98ec15e7.ctex"]
 
 [params]
 

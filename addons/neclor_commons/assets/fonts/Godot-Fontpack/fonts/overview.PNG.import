@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6xkr2b1tv1o2"
-path="res://.godot/imported/overview.PNG-7941d370af3829dadf2a935f3dabab34.ctex"
+path="res://.godot/imported/overview.PNG-0b170f2abe1cc523df4f1036c06b2c96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/fonts/Godot-Fontpack/fonts/overview.PNG"
-dest_files=["res://.godot/imported/overview.PNG-7941d370af3829dadf2a935f3dabab34.ctex"]
+source_file="res://addons/neclor_commons/assets/fonts/Godot-Fontpack/fonts/overview.PNG"
+dest_files=["res://.godot/imported/overview.PNG-0b170f2abe1cc523df4f1036c06b2c96.ctex"]
 
 [params]
 

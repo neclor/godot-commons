@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://po8yemonrrnv"
-path="res://.godot/imported/Poco.ttf-b1ddc83d3fbe810165a781457231c13f.fontdata"
+path="res://.godot/imported/Poco.ttf-d04e029e5d4163420392ca30c4840393.fontdata"
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/fonts/Godot-Fontpack/fonts/poco/Poco.ttf"
-dest_files=["res://.godot/imported/Poco.ttf-b1ddc83d3fbe810165a781457231c13f.fontdata"]
+source_file="res://addons/neclor_commons/assets/fonts/Godot-Fontpack/fonts/poco/Poco.ttf"
+dest_files=["res://.godot/imported/Poco.ttf-d04e029e5d4163420392ca30c4840393.fontdata"]
 
 [params]
 

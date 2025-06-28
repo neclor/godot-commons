@@ -45,6 +45,11 @@ func apply_central_force(force: Vector2) -> void:
 	_force += force
 
 
+func apply_central_impulse(impulse: Vector2) -> void:
+	if character == null: return
+	character.velocity += impulse / mass;
+
+
 #region Setters And Getters
 func get_character() -> CharacterBody2D:
 	return character

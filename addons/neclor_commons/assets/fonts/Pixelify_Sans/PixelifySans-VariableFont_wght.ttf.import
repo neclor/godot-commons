@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://chlvc2jw5uo74"
-path="res://.godot/imported/PixelifySans-VariableFont_wght.ttf-49982dfe59ad4664e4dfdf1f17ed6b2c.fontdata"
+path="res://.godot/imported/PixelifySans-VariableFont_wght.ttf-676484047d6b82dda94cbb2f589304f4.fontdata"
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/PixelifySans-VariableFont_wght.ttf-49982dfe59ad4664e4dfdf1f17ed6b2c.fontdata"]
+source_file="res://addons/neclor_commons/assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/PixelifySans-VariableFont_wght.ttf-676484047d6b82dda94cbb2f589304f4.fontdata"]
 
 [params]
 

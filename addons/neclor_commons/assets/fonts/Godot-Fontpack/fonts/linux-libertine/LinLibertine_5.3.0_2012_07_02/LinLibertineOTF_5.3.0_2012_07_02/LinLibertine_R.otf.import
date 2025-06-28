@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bmi16httu8yve"
-path="res://.godot/imported/LinLibertine_R.otf-59d78eaa5aab8c9725c4a4637327f9ed.fontdata"
+path="res://.godot/imported/LinLibertine_R.otf-f03d142448a59029509329fab19a879b.fontdata"
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/fonts/Godot-Fontpack/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_R.otf"
-dest_files=["res://.godot/imported/LinLibertine_R.otf-59d78eaa5aab8c9725c4a4637327f9ed.fontdata"]
+source_file="res://addons/neclor_commons/assets/fonts/Godot-Fontpack/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_R.otf"
+dest_files=["res://.godot/imported/LinLibertine_R.otf-f03d142448a59029509329fab19a879b.fontdata"]
 
 [params]
 

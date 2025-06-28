@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://l0sul7kx2p28"
-path="res://.godot/imported/cursor32.png-f8d166570e37c6576caf28b1ac966310.ctex"
+path="res://.godot/imported/cursor32.png-f4183a046b36b5ab113afdfbf0d4399c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/sprites/cursors/cursor32.png"
-dest_files=["res://.godot/imported/cursor32.png-f8d166570e37c6576caf28b1ac966310.ctex"]
+source_file="res://addons/neclor_commons/assets/sprites/cursors/cursor32.png"
+dest_files=["res://.godot/imported/cursor32.png-f4183a046b36b5ab113afdfbf0d4399c.ctex"]
 
 [params]
 

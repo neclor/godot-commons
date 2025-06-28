@@ -1,0 +1,1 @@
+class_name RigidObjectTemplate extends RigidBody2D

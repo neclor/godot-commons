@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1tlhfge20bph"
-path="res://.godot/imported/crosshair16.png-ac7edc0febb56a47e83b17d5883bc2e1.ctex"
+path="res://.godot/imported/crosshair16.png-c5ce1248838bb5718e8fbd57c2974f15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/sprites/cursors/crosshair16.png"
-dest_files=["res://.godot/imported/crosshair16.png-ac7edc0febb56a47e83b17d5883bc2e1.ctex"]
+source_file="res://addons/neclor_commons/assets/sprites/cursors/crosshair16.png"
+dest_files=["res://.godot/imported/crosshair16.png-c5ce1248838bb5718e8fbd57c2974f15.ctex"]
 
 [params]
 

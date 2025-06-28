@@ -1,0 +1,1 @@
+class_name StaticObjectTemplate extends StaticBody2D

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://wb8lxeap7p38"
-path="res://.godot/imported/Montreal-Regular.ttf-890bea287f8fca691b431a0d377b5c04.fontdata"
+path="res://.godot/imported/Montreal-Regular.ttf-ea5ff070b5c1e98bd68b32270d300961.fontdata"
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/fonts/Godot-Fontpack/fonts/montreal/Montreal-Regular.ttf"
-dest_files=["res://.godot/imported/Montreal-Regular.ttf-890bea287f8fca691b431a0d377b5c04.fontdata"]
+source_file="res://addons/neclor_commons/assets/fonts/Godot-Fontpack/fonts/montreal/Montreal-Regular.ttf"
+dest_files=["res://.godot/imported/Montreal-Regular.ttf-ea5ff070b5c1e98bd68b32270d300961.fontdata"]
 
 [params]
 

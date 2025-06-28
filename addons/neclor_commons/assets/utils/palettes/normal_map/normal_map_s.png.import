@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deb4upn2neq1b"
-path="res://.godot/imported/normal_map_s.png-501b53564540847e9731c889b5e46caa.ctex"
+path="res://.godot/imported/normal_map_s.png-0cfaced1037f992b44084abf9152828e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/utils/palettes/normal_map/normal_map_s.png"
-dest_files=["res://.godot/imported/normal_map_s.png-501b53564540847e9731c889b5e46caa.ctex"]
+source_file="res://addons/neclor_commons/assets/utils/palettes/normal_map/normal_map_s.png"
+dest_files=["res://.godot/imported/normal_map_s.png-0cfaced1037f992b44084abf9152828e.ctex"]
 
 [params]
 

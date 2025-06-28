@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ls7s3ncubrqc"
-path="res://.godot/imported/SourceCodePro-BoldIt.ttf-a7e866e6e3efff8a2d6c01c5a311c907.fontdata"
+path="res://.godot/imported/SourceCodePro-BoldIt.ttf-fca819c4416e79c6c5fe2f86f57cba29.fontdata"
 
 [deps]
 
-source_file="res://addons/neclor-commons/assets/fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-BoldIt.ttf"
-dest_files=["res://.godot/imported/SourceCodePro-BoldIt.ttf-a7e866e6e3efff8a2d6c01c5a311c907.fontdata"]
+source_file="res://addons/neclor_commons/assets/fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-BoldIt.ttf"
+dest_files=["res://.godot/imported/SourceCodePro-BoldIt.ttf-fca819c4416e79c6c5fe2f86f57cba29.fontdata"]
 
 [params]
 
