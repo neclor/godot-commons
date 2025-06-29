@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://6x6qh73m6x74"]
+[gd_scene load_steps=4 format=3 uid="uid://6x6qh73m6x74"]
 
 [ext_resource type="Script" uid="uid://c0egiadxbspmt" path="res://test/sandbox/test.gd" id="1_vu2rc"]
+[ext_resource type="Script" uid="uid://dcagsukuhhgna" path="res://addons/NeclorCommons/src/Components/Scripts/stati/StatIntComponent.cs" id="2_mr2tf"]
+[ext_resource type="Script" uid="uid://c6s5ysum16iic" path="res://addons/NeclorCommons/src/Components/Scripts/stati/HealthComponent.cs" id="3_vu2rc"]
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_vu2rc")
@@ -12,3 +14,14 @@ polygon = PackedVector2Array(0, 4, 4, 0, 0, -4, -4, 0)
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="."]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_mr2tf")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("3_vu2rc")
+metadata/_custom_type_script = "uid://c6s5ysum16iic"
+
+[node name="HealthComponent" type="Node" parent="HealthComponent"]
+script = ExtResource("3_vu2rc")
+metadata/_custom_type_script = "uid://c6s5ysum16iic"

@@ -14,7 +14,8 @@ config/name="Neclor Commons"
 config/description="Frequently used scripts, systems and utilities for Godot."
 config/version="0.1.0"
 config/tags=PackedStringArray("addon")
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://6x6qh73m6x74"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="uid://cehbrdhhakru0"
 
 [display]
@@ -26,11 +27,11 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="NeclorCommons"
+project/assembly_name="NeclorCommonsProject"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/NeclorCommons/plugin.cfg")
 
 [file_customization]
 

@@ -1,4 +1,4 @@
-class_name HealthComponent extends StatiComponent
+class_name HealthComponentGD extends StatiComponent
 
 
 signal resurrected(value: int)
