@@ -26,7 +26,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="Commons"
+project/assembly_name="NeclorCommons"
 
 [editor_plugins]
 
