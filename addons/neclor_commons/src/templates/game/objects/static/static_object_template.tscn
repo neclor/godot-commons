@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfqc5k4iqyg62"]
-
-[ext_resource type="Script" uid="uid://cbuto327mr2a7" path="res://addons/neclor_commons/src/templates/game/objects/static/static_object_template.gd" id="1_xmk53"]
-
-[node name="StaticObjectTemplate" type="StaticBody2D"]
-script = ExtResource("1_xmk53")

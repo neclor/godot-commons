@@ -7,11 +7,11 @@ func _run() -> void:
 	#print(is_instance_of(obj, ClassDB))
 	print(Singleton.new())
 	
-	print(Singleton.get_instance_of(Singleton))
-	print(Sing.get_instance_of(Singleton))
+	print(Singleton.instance_of(Singleton))
+	print(Sing.instance_of(Singleton))
 	
-	print(Sing.get_instance_of(Sing))
-	print(Singleton.get_instance_of(Sing))
+	print(Sing.instance_of(Sing))
+	print(Singleton.instance_of(Sing))
 	
 	
 	

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Commons"
+config/name="Neclor Commons"
 config/description="Frequently used scripts, systems and utilities for Godot."
 config/version="0.1.0"
 config/tags=PackedStringArray("addon")
@@ -30,7 +30,7 @@ project/assembly_name="Commons"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/neclor-commons/plugin.cfg")
+enabled=PackedStringArray()
 
 [file_customization]
 
