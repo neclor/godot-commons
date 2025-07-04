@@ -9,7 +9,7 @@ namespace NeclorCommons.Components.Scripts;
 
 
 [GlobalClass]
-public partial class Rotation2DComponent : Node2D, IComponent, IActivatable {
+public partial class Rotation2DComponent : Node2D, IComponent {
 
 
 	[Signal]
@@ -23,10 +23,9 @@ public partial class Rotation2DComponent : Node2D, IComponent, IActivatable {
 	}
 
 
-
 	[ExportGroup("")]
 	[Export]
-	public bool IsActive { get; set; } = true;
+	public RotationMode Mode { get; set; } = RotationMode.Lerp;
 
 
 	[ExportGroup("Rotation Speed")]
@@ -41,6 +40,12 @@ public partial class Rotation2DComponent : Node2D, IComponent, IActivatable {
 		get;
 		set => field = MathF.Max(0, value);
 	} = 20.0f;
+
+
+	public float DesiredRotation {
+		get;
+		set => AngleUtils.wrap_angle(value);
+	} = 0.0f;
 
 
 
@@ -76,17 +81,6 @@ enum RotationMode {
 	DISABLED,
 }
 
-
-@export_group("")
-@export var rotation_mode: RotationMode = RotationMode.LERP:
-	get = get_rotation_mode,
-	set = set_rotation_mode
-@export_range(0, 100, 0.01, "or_greater") var rotation_speed: float = PI:
-	get = get_rotation_speed,
-	set = set_rotation_speed
-@export_range(0, 100, 1, "or_greater", "hide_slider") var decay: float = 20:
-	get = get_decay,
-	set = set_decay
 
 
 var global_desired_rotation: float:
