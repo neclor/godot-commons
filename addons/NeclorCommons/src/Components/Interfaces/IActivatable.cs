@@ -1,25 +1,21 @@
-using Godot;
-using System;
-
-
 namespace NeclorCommons.Components.Interfaces;
 
 
 public interface IActivatable {
 
 
-	public bool Active { get; set; }
+	public bool IsActive { get; set; }
 
 
-	public void SetActive(bool active) {
-		Active = active;
+	public void SetIsActive(bool value) {
+		IsActive = value;
 	}
 
 	public void Activate() {
-		Active = true;
+		IsActive = true;
 	}
 
 	public void Deactivate() {
-		Active = false;
+		IsActive = false;
 	}
 }

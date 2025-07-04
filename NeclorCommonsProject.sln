@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1
+VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeclorCommonsProject", "NeclorCommonsProject.csproj", "{36963954-C399-439A-8A97-778825B546DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeclorCommonsProject", "NeclorCommonsProject.csproj", "{1FCCAC5A-A269-44CA-A610-9A07E28CD5E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeclorCommons", "addons\NeclorCommons\src\NeclorCommons.csproj", "{5950E3EE-3487-3ADE-AA64-50BC6426C3C9}"
 EndProject
@@ -14,12 +14,12 @@ Global
 		ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{36963954-C399-439A-8A97-778825B546DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36963954-C399-439A-8A97-778825B546DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36963954-C399-439A-8A97-778825B546DF}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{36963954-C399-439A-8A97-778825B546DF}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{36963954-C399-439A-8A97-778825B546DF}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{36963954-C399-439A-8A97-778825B546DF}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{1FCCAC5A-A269-44CA-A610-9A07E28CD5E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FCCAC5A-A269-44CA-A610-9A07E28CD5E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FCCAC5A-A269-44CA-A610-9A07E28CD5E7}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{1FCCAC5A-A269-44CA-A610-9A07E28CD5E7}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{1FCCAC5A-A269-44CA-A610-9A07E28CD5E7}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{1FCCAC5A-A269-44CA-A610-9A07E28CD5E7}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 		{5950E3EE-3487-3ADE-AA64-50BC6426C3C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5950E3EE-3487-3ADE-AA64-50BC6426C3C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5950E3EE-3487-3ADE-AA64-50BC6426C3C9}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
@@ -31,6 +31,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FD8F10D9-DBDC-4559-BA27-BA4A8B031986}
+		SolutionGuid = {D254D248-F843-4B77-88AB-4C0FD984FF06}
 	EndGlobalSection
 EndGlobal
