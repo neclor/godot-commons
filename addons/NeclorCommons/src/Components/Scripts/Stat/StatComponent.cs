@@ -6,7 +6,7 @@ namespace NeclorCommons.Components.Scripts;
 
 
 [GlobalClass]
-public partial class StatComponent : Node, IComponent {
+public partial class StatComponent(int maxValue = 100) : Node, IComponent {
 
 
 	[Signal]
@@ -24,9 +24,6 @@ public partial class StatComponent : Node, IComponent {
 	//public delegate void ValueIncreasedEventHandler(int amount);
 
 
-	private const int DefaultValue = 100;
-
-
 	[ExportGroup("")]
 	[Export(PropertyHint.Range, "0, 100, 1, or_greater")]
 	public int MaxValue {
@@ -41,7 +38,7 @@ public partial class StatComponent : Node, IComponent {
 			Value = Value;
 			if (oldValue == Value && Value == field) EmitSignal(SignalName.OnFull, field);
 		}
-	} = DefaultValue;
+	} = maxValue;
 
 	[Export(PropertyHint.Range, "0, 100, 1, or_greater")]
 	public virtual int Value {
@@ -60,7 +57,7 @@ public partial class StatComponent : Node, IComponent {
 			if (IsFull) EmitSignal(SignalName.OnFull, field);
 			if (IsZero) EmitSignal(SignalName.OnZero);
 		}
-	} = DefaultValue;
+	} = maxValue;
 
 
 	public bool IsFull {
@@ -70,11 +67,6 @@ public partial class StatComponent : Node, IComponent {
 		get => Value == 0;
 	}
 
-
-	public StatIntComponent(int maxValue = DefaultValue, int value = DefaultValue) {
-		MaxValue = maxValue;
-		Value = value;
-	}
 
 	public int DecreaseMaxValue(int amount) {
 		int oldMaxValue = MaxValue;
