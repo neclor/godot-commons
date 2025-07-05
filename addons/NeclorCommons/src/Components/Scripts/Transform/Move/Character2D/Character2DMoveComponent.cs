@@ -50,6 +50,7 @@ public partial class Character2DMoveComponent : MoveComponent {
 		set => field = MathF.Max(0, value);
 	} = 1.0f;
 
+
 	protected Vector2 Force { get; set; } = Vector2.Zero;
 
 

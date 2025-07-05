@@ -4,18 +4,18 @@ namespace NeclorCommons.Components.Interfaces;
 public interface IActivatable {
 
 
-	public bool IsActive { get; set; }
+	bool IsActive { get; set; }
 
 
-	public void SetIsActive(bool value) {
+	void SetIsActive(bool value) {
 		IsActive = value;
 	}
 
-	public void Activate() {
+	void Activate() {
 		IsActive = true;
 	}
 
-	public void Deactivate() {
+	void Deactivate() {
 		IsActive = false;
 	}
 }

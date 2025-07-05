@@ -16,7 +16,7 @@ public partial class MoveComponent : Node, IComponent, IActivatable {
 
 	public Vector2 InputDirection {
 		get;
-		set => value.Normalized();
+		set => field = value.Normalized();
 	} = Vector2.Zero;
 
 

@@ -1,47 +1,30 @@
-using System;
+using Godot;
+
 
 namespace NeclorCommons.Utils;
 
 
-public static class MathUtils {
+public static class MathfUtils {
 
 
 	public const float ThirdTau = MathF.Tau / 3;
+	public const float HalfPi = MathF.PI / 2;
+	public const float ThirdPi = MathF.PI / 3;
+
+
+	public const float MinAngle = -MathF.PI;
+	public const float MaxAngle = MathF.PI;
+
 
 	public static float DecayWeight(float decay, float delta) {
 		return 1 - MathF.Exp(-decay * delta);
 	}
 
+	public static float WrapAngle(float value) {
+		return Mathf.Wrap(value, MinAngle, MaxAngle);
+	}
 
+	public static float WrapAngleDegrees(float value) {
+		return Mathf.RadToDeg(WrapAngle(Mathf.DegToRad(value)));
+	}
 }
-
-
-
-class_name AngleUtils extends Object
-
-
-## Utility functions for angles.
-
-
-## Third of [constant @GDScript.TAU], equals 120 degrees.
-const THIRD_TAU: float = TAU / 3
-## Half of [constant @GDScript.PI], equals 90 degrees.
-const HALF_PI: float = PI / 2
-## Third of [constant @GDScript.PI], equals 60 degrees.
-const THIRD_PI: float = PI / 3
-
-
-## Equals -[constant @GDScript.PI]
-const MIN: float = -PI
-## Equals [constant @GDScript.PI]
-const MAX: float = PI
-
-
-## Wraps the [param angle] between [constant MIN] and [constant MAX].
-static func wrap_angle(angle: float) -> float:
-	return wrapf(angle, MIN, MAX)
-
-
-## Wraps the [param angle_degrees] between [code]-180[/code] and [code]180[/code].
-static func wrap_angle_degrees(angle_degrees: float) -> float:
-	return rad_to_deg(wrap_angle(deg_to_rad(angle_degrees)))

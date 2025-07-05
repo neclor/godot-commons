@@ -15,7 +15,7 @@ public partial class TopDownCharacter2DMoveComponent : Character2DMoveComponent 
 		Vector2 halfDeltaVelocity = Force / Mass * (float)delta / 2;
 
 		Character.Velocity += halfDeltaVelocity;
-		Character.Velocity = Character.Velocity.Lerp(InputDirection * Speed, MathUtils.DecayWeight(Decay, (float)delta));
+		Character.Velocity = Character.Velocity.Lerp(InputDirection * Speed, MathfUtils.DecayWeight(Decay, (float)delta));
 
 		Vector2 preCollisionVelocity = Character.Velocity;
 
@@ -26,7 +26,7 @@ public partial class TopDownCharacter2DMoveComponent : Character2DMoveComponent 
 	}
 
 
-	private void PushRigidBodies(Vector2 preCollisionVelocity) {
+	protected void PushRigidBodies(Vector2 preCollisionVelocity) {
 		if (Character is null) return;
 
 		Action<RigidBody2D, Vector2> pushLogic;

@@ -1,4 +1,4 @@
-class_name Camera2DSceneComponent extends Camera2D
+class_name Camera2DSceneComponentA extends Camera2D
 
 
 @export_group("Zoom")
@@ -17,13 +17,6 @@ class_name Camera2DSceneComponent extends Camera2D
 @export_range(0, 1, 0.01) var _mouse_drag_bottom_margin: float = 0.5
 
 
-#region new()
-static func new() -> Camera2DSceneComponent:
-	var packed_scene: PackedScene = preload(
-		"res://addons/neclor-commons/src/components/scenes/camera/camera_2d_scene_component.tscn"
-	)
-	return packed_scene.instantiate()
-#endregion
 
 
 func _init() -> void:
@@ -31,6 +24,7 @@ func _init() -> void:
 
 
 func _process(_delta: float) -> void:
+	print(get_viewport_rect().size, get_local_mouse_position())
 	var half_real_viewport_size: Vector2 = get_viewport_rect().size / zoom / 2
 	var mouse_position: Vector2 = get_local_mouse_position()
 
@@ -50,8 +44,11 @@ func _process(_delta: float) -> void:
 	)
 
 
-
-
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("scroll_up"):
+		zoom_in()
+	elif event.is_action_pressed("scroll_down"):
+		zoom_out()
 
 
 func get_min_zoom() -> Vector2:

@@ -60,12 +60,8 @@ public partial class StatComponent(int maxValue = 100) : Node, IComponent {
 	} = maxValue;
 
 
-	public bool IsFull {
-		get => Value == MaxValue;
-	}
-	public bool IsZero {
-		get => Value == 0;
-	}
+	public bool IsFull => Value == MaxValue;
+	public bool IsZero => Value == 0;
 
 
 	public int DecreaseMaxValue(int amount) {

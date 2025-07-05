@@ -1,4 +1,4 @@
 namespace NeclorCommons.Components.Interfaces;
 
 
-interface IComponent { }
+public interface IComponent { }
