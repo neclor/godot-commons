@@ -1,4 +1,4 @@
-namespace NeclorCommons.Components.Interfaces;
+namespace Neclor.Commons.Components.Interfaces;
 
 
 public interface IActivatable {

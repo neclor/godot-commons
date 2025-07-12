@@ -1,6 +1,6 @@
 using Godot;
-using NeclorCommons.Components.Interfaces;
-using NeclorCommons.Utils;
+using Neclor.Commons.Components.Interfaces;
+using Neclor.Commons.Utils;
 
 
 namespace NeclorCommons.Components.Scripts;

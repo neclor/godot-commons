@@ -1,5 +1,5 @@
 using Godot;
-using NeclorCommons.Components.Interfaces;
+using Neclor.Commons.Components.Interfaces;
 
 
 namespace NeclorCommons.Components.Scripts;

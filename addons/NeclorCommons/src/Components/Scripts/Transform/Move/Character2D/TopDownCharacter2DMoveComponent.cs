@@ -1,5 +1,5 @@
 using Godot;
-using NeclorCommons.Utils;
+using Neclor.Commons.Utils;
 
 
 namespace NeclorCommons.Components.Scripts;
@@ -15,7 +15,7 @@ public partial class TopDownCharacter2DMoveComponent : Character2DMoveComponent 
 		Vector2 halfDeltaVelocity = Force / Mass * (float)delta / 2;
 
 		Character.Velocity += halfDeltaVelocity;
-		Character.Velocity = Character.Velocity.Lerp(InputDirection * Speed, MathfUtils.DecayWeight(Decay, (float)delta));
+		Character.Velocity = Character.Velocity.Lerp(InputDirection * Speed, MathfUtils.DecayWeight(Decay, delta));
 
 		Vector2 preCollisionVelocity = Character.Velocity;
 

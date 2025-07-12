@@ -1,18 +1,26 @@
 using Godot;
-using NeclorCommons.Components.Interfaces;
+using Neclor.Commons.Utils;
+using Neclor.Commons.Components.Interfaces;
 
 
-namespace NeclorCommons.Components.Scenes;
+namespace Neclor.Commons.Components.Scenes;
 
 
 [GlobalClass]
 public partial class Camera2DSceneComponent : Camera2D, IScene, IComponent {
 
 
-	public static string ScenePath => "res://addons/NeclorCommons/src/Components/Scenes/Camera/Camera2DSceneComponent.tscn";
+	public static string ScenePath =>
+		"res://addons/NeclorCommons/src/Components/Scenes/Camera/Camera2DSceneComponent.tscn";
 
 
-	[ExportGroup("")]
+	[Signal]
+	public delegate void ShakeStartedEventHandler();
+	[Signal]
+	public delegate void ShakeFinishedEventHandler();
+
+
+	[ExportGroup("Zoom")]
 	[Export]
 	public Vector2 MaxZoom {
 		get;
@@ -51,26 +59,44 @@ public partial class Camera2DSceneComponent : Camera2D, IScene, IComponent {
 		set => field = Math.Clamp(value, 0.0f, 1.0f);
 	} = 0.5f;
 
+	[Export(PropertyHint.Range, "0, 100, 1, or_greater, hide_slider")]
+	public float MouseDragDecay {
+		get;
+		set => field = MathF.Max(0, value);
+	} = 20.0f;
+
+
+	[ExportGroup("Shake")]
+	[Export(PropertyHint.Range, "0, 100, 1, or_greater, hide_slider")]
+	public float DefaultShakeStrength {
+		get;
+		set => field = MathF.Max(0, value);
+	} = 5.0f;
+
+	[Export(PropertyHint.Range, "0, 100, 1, or_greater, hide_slider")]
+	public float ShakeDecay {
+		get;
+		set => field = MathF.Max(0, value);
+	} = 5.0f;
+
+
+	public float ShakeStrength {
+		get;
+		set => field = MathF.Max(0, value);
+	} = 0.0f;
+
 
 	public override void _Process(double delta) {
 		if (!Enabled) return;
 
-		Vector2 halfViewportSize = GetViewportRect().Size / 2;
-		Vector2 localMousePosition = GetViewport().GetMousePosition() - halfViewportSize;
-		Vector2 normalizedMousePosition = localMousePosition.Clamp(-halfViewportSize, halfViewportSize) / (halfViewportSize * Zoom);
-
-		Vector2 normalizedCameraPosition = new Vector2(
-			MathF.Min(MouseDragLeftMargin + normalizedMousePosition.X, 0.0f) + MathF.Max(0.0f, normalizedMousePosition.X - MouseDragRightMargin),
-			MathF.Min(MouseDragTopMargin + normalizedMousePosition.Y, 0.0f) + MathF.Max(0.0f, normalizedMousePosition.Y - MouseDragBottomMargin)
-		);
-
-		Position = normalizedCameraPosition * halfViewportSize;
+		ProcessPosition(delta);
+		ProcessShake(delta);
 	}
 
-	public override void _UnhandledInput(InputEvent @event) {
-		if (@event.IsActionPressed("scroll_up")) ZoomIn();
-		else if (@event.IsActionPressed("scroll_down")) ZoomOut();
 
+	public void StartShake(float? strength = null) {
+		ShakeStrength = strength ?? DefaultShakeStrength;
+		EmitSignal(SignalName.ShakeStarted);
 	}
 
 	public void ZoomIn() {
@@ -98,4 +124,35 @@ public partial class Camera2DSceneComponent : Camera2D, IScene, IComponent {
 		MinZoom = value;
 	}
 	#endregion
+
+
+	private void ProcessPosition(double delta) {
+		Vector2 halfViewportSize = GetViewportRect().Size / 2;
+		Vector2 localMousePosition = GetViewport().GetMousePosition() - halfViewportSize;
+		Vector2 normalizedMousePosition = (localMousePosition / halfViewportSize).Clamp(-1, 1);
+
+		Vector2 normalizedCameraPosition = new Vector2(
+			MathF.Min(MouseDragLeftMargin + normalizedMousePosition.X, 0.0f) + MathF.Max(0.0f, normalizedMousePosition.X - MouseDragRightMargin),
+			MathF.Min(MouseDragTopMargin + normalizedMousePosition.Y, 0.0f) + MathF.Max(0.0f, normalizedMousePosition.Y - MouseDragBottomMargin)
+		);
+
+
+		Position = Position.Lerp(
+			normalizedCameraPosition * halfViewportSize / Zoom,
+			MathfUtils.DecayWeight(MouseDragDecay, delta)
+		);
+	}
+
+	private void ProcessShake(double delta) {
+		if (Mathf.IsZeroApprox(ShakeStrength)) return;
+
+		Vector2 offset = new Vector2(
+			(float)GD.RandRange(-1.0f, 1.0f),
+			(float)GD.RandRange(-1.0f, 1.0f)
+		).Normalized() * ShakeStrength;
+		Position += offset;
+		ShakeStrength = float.Lerp(ShakeStrength, 0, MathfUtils.DecayWeight(ShakeDecay, delta));
+
+		if (Mathf.IsZeroApprox(ShakeStrength)) EmitSignal(SignalName.ShakeFinished);
+	}
 }

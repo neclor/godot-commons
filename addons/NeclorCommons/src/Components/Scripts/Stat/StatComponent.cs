@@ -1,8 +1,8 @@
 using Godot;
-using NeclorCommons.Components.Interfaces;
+using Neclor.Commons.Components.Interfaces;
 
 
-namespace NeclorCommons.Components.Scripts;
+namespace Neclor.Commons.Components.Scripts;
 
 
 [GlobalClass]
@@ -22,7 +22,6 @@ public partial class StatComponent(int maxValue = 100) : Node, IComponent {
 	//public delegate void ValueDecreasedEventHandler(int amount);
 	//[Signal]
 	//public delegate void ValueIncreasedEventHandler(int amount);
-
 
 	[ExportGroup("")]
 	[Export(PropertyHint.Range, "0, 100, 1, or_greater")]

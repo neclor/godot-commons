@@ -1,6 +1,6 @@
 using Godot;
 
-namespace NeclorCommons.Components.Interfaces;
+namespace Neclor.Commons.Components.Interfaces;
 
 
 public interface IScene {
