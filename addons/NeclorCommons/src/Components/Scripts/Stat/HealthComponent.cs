@@ -1,7 +1,7 @@
 using Godot;
 
 
-namespace NeclorCommons.Components.Scripts;
+namespace Neclor.Commons.Components.Scripts;
 
 
 [GlobalClass]
