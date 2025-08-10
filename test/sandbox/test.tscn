@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://6x6qh73m6x74"]
+[gd_scene load_steps=6 format=3 uid="uid://6x6qh73m6x74"]
 
 [ext_resource type="Script" uid="uid://c0egiadxbspmt" path="res://test/sandbox/test.gd" id="1_vu2rc"]
 [ext_resource type="Script" uid="uid://deu3ucmcms6lg" path="res://test/sandbox/polygon_2d_2.gd" id="2_vu2rc"]
+[ext_resource type="Script" uid="uid://cjq41ct3mpuq3" path="res://addons/aa/cust_node.gd" id="4_cjedn"]
 [ext_resource type="PackedScene" uid="uid://bg444ytatrfp3" path="res://addons/NeclorCommons/src/Components/Scenes/Camera/Camera2DSceneComponent.tscn" id="4_qivky"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vu2rc"]
@@ -47,9 +48,19 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
 size = Vector2i(120, 120)
+render_target_update_mode = 4
 
 [node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Node3D"]
 mesh = SubResource("CylinderMesh_vu2rc")
+
+[node name="AAAB2D" type="Node2D" parent="."]
+script = ExtResource("4_cjedn")
+metadata/_custom_type_script = "uid://cjq41ct3mpuq3"
+
+[node name="CustNode2D" type="Node2D" parent="."]
+script = ExtResource("4_cjedn")
+metadata/_custom_type_script = "uid://cjq41ct3mpuq3"
