@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bea8pndc7m16c"
-path="res://.godot/imported/SourceCodePro-ExtraLight.ttf-29585564836cbbd84594ec91f655ba1d.fontdata"
+path="res://.godot/imported/SourceCodePro-ExtraLight.ttf-f21ce02517aae61e7a850bf41eb4ffb0.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/assets/fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-ExtraLight.ttf"
-dest_files=["res://.godot/imported/SourceCodePro-ExtraLight.ttf-29585564836cbbd84594ec91f655ba1d.fontdata"]
+source_file="res://addons/NeclorCommons/Assets/Fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-ExtraLight.ttf"
+dest_files=["res://.godot/imported/SourceCodePro-ExtraLight.ttf-f21ce02517aae61e7a850bf41eb4ffb0.fontdata"]
 
 [params]
 
@@ -25,6 +25,7 @@ modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true
+oversampling=0.0
 Fallbacks=null
 fallbacks=[]
 Compress=null

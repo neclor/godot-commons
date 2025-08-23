@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://clq6bwd85oipt"
-path="res://.godot/imported/SourceCodePro-LightIt.ttf-af1753391f8bdbbc1e9ecc78571b58cd.fontdata"
+path="res://.godot/imported/SourceCodePro-LightIt.ttf-9c6d383db0017b5ce35f8d68e9b176b6.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/assets/fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-LightIt.ttf"
-dest_files=["res://.godot/imported/SourceCodePro-LightIt.ttf-af1753391f8bdbbc1e9ecc78571b58cd.fontdata"]
+source_file="res://addons/NeclorCommons/Assets/Fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-LightIt.ttf"
+dest_files=["res://.godot/imported/SourceCodePro-LightIt.ttf-9c6d383db0017b5ce35f8d68e9b176b6.fontdata"]
 
 [params]
 
@@ -25,6 +25,7 @@ modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true
+oversampling=0.0
 Fallbacks=null
 fallbacks=[]
 Compress=null

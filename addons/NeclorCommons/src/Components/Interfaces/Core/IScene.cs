@@ -1,15 +1,16 @@
 using Godot;
 
-namespace Neclor.Commons.Components.Interfaces;
+
+namespace Neclor.Commons.Components.Interfaces.Core;
 
 
-public interface IScene {
+public interface IScene<TSelf> where TSelf : Node, IScene<TSelf> {
 
 
 	static abstract string ScenePath { get; }
 
 
-	static T New<T>() where T : Node, IScene{
-		return GD.Load<PackedScene>(T.ScenePath).Instantiate<T>();
+	static TSelf New() {
+		return GD.Load<PackedScene>(TSelf.ScenePath).Instantiate<TSelf>();
 	}
 }

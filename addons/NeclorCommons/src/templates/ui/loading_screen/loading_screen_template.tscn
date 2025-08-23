@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cdu0xkj3od4pj"]
 
-[ext_resource type="Script" uid="uid://cq4vt3ps6eeu1" path="res://addons/NeclorCommons/src/templates/ui/loading_screen/loading_screen_template.gd" id="1_lsa8i"]
+[ext_resource type="Script" uid="uid://cq4vt3ps6eeu1" path="res://addons/NeclorCommons/Src/templates/ui/loading_screen/loading_screen_template.gd" id="1_lsa8i"]
 
 [node name="LoadingScreenTemplate" type="CanvasLayer"]
 script = ExtResource("1_lsa8i")

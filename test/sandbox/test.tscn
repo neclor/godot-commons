@@ -2,10 +2,17 @@
 
 [ext_resource type="Script" uid="uid://c0egiadxbspmt" path="res://test/sandbox/test.gd" id="1_vu2rc"]
 [ext_resource type="Script" uid="uid://deu3ucmcms6lg" path="res://test/sandbox/polygon_2d_2.gd" id="2_vu2rc"]
-[ext_resource type="Script" uid="uid://cjq41ct3mpuq3" path="res://addons/aa/cust_node.gd" id="4_cjedn"]
-[ext_resource type="PackedScene" uid="uid://bg444ytatrfp3" path="res://addons/NeclorCommons/src/Components/Scenes/Camera/Camera2DSceneComponent.tscn" id="4_qivky"]
+[ext_resource type="PackedScene" uid="uid://bg444ytatrfp3" path="res://addons/NeclorCommons/Src/Components/Scenes/Camera/Camera2DSceneComponent.tscn" id="4_qivky"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vu2rc"]
+
+[sub_resource type="GDScript" id="GDScript_vu2rc"]
+script/source = "class_name CustNode2D extends Node2D
+
+
+
+var abc: int = 12
+"
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_vu2rc")
@@ -37,7 +44,7 @@ closed = true
 width = 1.0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 181.0
@@ -58,9 +65,9 @@ render_target_update_mode = 4
 mesh = SubResource("CylinderMesh_vu2rc")
 
 [node name="AAAB2D" type="Node2D" parent="."]
-script = ExtResource("4_cjedn")
+script = SubResource("GDScript_vu2rc")
 metadata/_custom_type_script = "uid://cjq41ct3mpuq3"
 
 [node name="CustNode2D" type="Node2D" parent="."]
-script = ExtResource("4_cjedn")
+script = SubResource("GDScript_vu2rc")
 metadata/_custom_type_script = "uid://cjq41ct3mpuq3"

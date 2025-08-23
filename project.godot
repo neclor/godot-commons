@@ -31,7 +31,7 @@ project/assembly_name="NeclorCommonsProject"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/NeclorCommons/plugin.cfg", "res://addons/a/plugin.cfg", "res://addons/aa/plugin.cfg")
+enabled=PackedStringArray("res://addons/NeclorCommons/plugin.cfg", "res://addons/aa/plugin.cfg")
 
 [file_customization]
 

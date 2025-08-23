@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cjl30r871wa1l"
-path="res://.godot/imported/PixelifySans-Regular.ttf-42d9eba871b00dc3eade88e1b2656936.fontdata"
+path="res://.godot/imported/PixelifySans-Regular.ttf-6b01e152a0afa53f0b251970941e378a.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/assets/fonts/Pixelify_Sans/static/PixelifySans-Regular.ttf"
-dest_files=["res://.godot/imported/PixelifySans-Regular.ttf-42d9eba871b00dc3eade88e1b2656936.fontdata"]
+source_file="res://addons/NeclorCommons/Assets/Fonts/Pixelify_Sans/static/PixelifySans-Regular.ttf"
+dest_files=["res://.godot/imported/PixelifySans-Regular.ttf-6b01e152a0afa53f0b251970941e378a.fontdata"]
 
 [params]
 
@@ -25,6 +25,7 @@ modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true
+oversampling=0.0
 Fallbacks=null
 fallbacks=[]
 Compress=null
