@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4ork73murpcm"
-path="res://.godot/imported/test_texture.png-4588f78ff2596de1085ca537dfd954c7.ctex"
+path="res://.godot/imported/test_texture.png-82882bf1b5d97ed7208825053b27c68d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/NeclorCommons/Assets/Sprites/Utils/test_texture.png"
-dest_files=["res://.godot/imported/test_texture.png-4588f78ff2596de1085ca537dfd954c7.ctex"]
+source_file="res://addons/NeclorCommons/assets/sprites/Utils/test_texture.png"
+dest_files=["res://.godot/imported/test_texture.png-82882bf1b5d97ed7208825053b27c68d.ctex"]
 
 [params]
 
