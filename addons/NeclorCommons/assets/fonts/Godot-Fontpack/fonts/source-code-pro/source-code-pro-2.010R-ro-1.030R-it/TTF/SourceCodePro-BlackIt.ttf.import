@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dagpg86g62q8y"
-path="res://.godot/imported/SourceCodePro-BlackIt.ttf-650598f107ad333c6b3bcd0103649a9d.fontdata"
+path="res://.godot/imported/SourceCodePro-BlackIt.ttf-9ff1d82434d6e9c504ae7eed0d54ff5b.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/assets/fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-BlackIt.ttf"
-dest_files=["res://.godot/imported/SourceCodePro-BlackIt.ttf-650598f107ad333c6b3bcd0103649a9d.fontdata"]
+source_file="res://addons/NeclorCommons/Assets/Fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-BlackIt.ttf"
+dest_files=["res://.godot/imported/SourceCodePro-BlackIt.ttf-9ff1d82434d6e9c504ae7eed0d54ff5b.fontdata"]
 
 [params]
 

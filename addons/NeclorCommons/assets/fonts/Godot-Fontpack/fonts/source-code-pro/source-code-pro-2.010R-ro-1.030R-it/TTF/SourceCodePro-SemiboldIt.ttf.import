@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cvm8aosnvg6h4"
-path="res://.godot/imported/SourceCodePro-SemiboldIt.ttf-aae524723231e8501506d1bd0bef2f3e.fontdata"
+path="res://.godot/imported/SourceCodePro-SemiboldIt.ttf-323ab73f363e112f23dbadd0284f1b40.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/assets/fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-SemiboldIt.ttf"
-dest_files=["res://.godot/imported/SourceCodePro-SemiboldIt.ttf-aae524723231e8501506d1bd0bef2f3e.fontdata"]
+source_file="res://addons/NeclorCommons/Assets/Fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-SemiboldIt.ttf"
+dest_files=["res://.godot/imported/SourceCodePro-SemiboldIt.ttf-323ab73f363e112f23dbadd0284f1b40.fontdata"]
 
 [params]
 

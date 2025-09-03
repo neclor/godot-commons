@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0egiadxbspmt" path="res://test/sandbox/test.gd" id="1_vu2rc"]
 [ext_resource type="Script" uid="uid://deu3ucmcms6lg" path="res://test/sandbox/polygon_2d_2.gd" id="2_vu2rc"]
-[ext_resource type="PackedScene" uid="uid://bg444ytatrfp3" path="res://addons/NeclorCommons/Src/Components/Scenes/Camera/Camera2DSceneComponent.tscn" id="4_qivky"]
+[ext_resource type="PackedScene" uid="uid://bg444ytatrfp3" path="res://addons/NeclorCommons/Src/Components/Scenes/camera/Camera2DSceneComponent.tscn" id="4_qivky"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vu2rc"]
 
@@ -66,8 +66,6 @@ mesh = SubResource("CylinderMesh_vu2rc")
 
 [node name="AAAB2D" type="Node2D" parent="."]
 script = SubResource("GDScript_vu2rc")
-metadata/_custom_type_script = "uid://cjq41ct3mpuq3"
 
 [node name="CustNode2D" type="Node2D" parent="."]
 script = SubResource("GDScript_vu2rc")
-metadata/_custom_type_script = "uid://cjq41ct3mpuq3"

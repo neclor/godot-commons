@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://biytpu2qqt6nk"
-path="res://.godot/imported/ConnectionII.otf-224415da2d0c32254b080cba15a5199d.fontdata"
+path="res://.godot/imported/ConnectionII.otf-02e1f162878bb4b50c5bad2a4e306df0.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/assets/fonts/Godot-Fontpack/fonts/connection_ii/ConnectionII.otf"
-dest_files=["res://.godot/imported/ConnectionII.otf-224415da2d0c32254b080cba15a5199d.fontdata"]
+source_file="res://addons/NeclorCommons/Assets/Fonts/Godot-Fontpack/fonts/connection_ii/ConnectionII.otf"
+dest_files=["res://.godot/imported/ConnectionII.otf-02e1f162878bb4b50c5bad2a4e306df0.fontdata"]
 
 [params]
 
