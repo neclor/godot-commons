@@ -1,6 +1,10 @@
 
 
 
+using Neclor.Commons.Utils;
+
+
+
 class Program {
 	static void Main() {
 
@@ -13,7 +17,16 @@ class Program {
 		Console.WriteLine("this RigidBody2D");
 		bool yes = rigidBody is B;
 		Console.WriteLine(yes);
-		
+
+
+		float a = 10f;
+		double delta = 0.016;
+
+		float b = MathUtils.DecayWeight(a, delta);
+
+
+
+
 	}
 }
 
