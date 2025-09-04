@@ -7,12 +7,14 @@ namespace Neclor.Commons.Utils;
 
 public static class ConcurrentMemorizer {
 
-	static readonly ConcurrentDictionary<Delegate, ConcurrentDictionary<string, object?>> _methodsMap = new();
+	const int MaxEntriesPerMethod = 128;
+
+	static readonly ConcurrentDictionary<Delegate, LimitedConcurrentDict<string, object?>> _methodsMap = new();
 
 	public static T Call<T>(Delegate func, params object?[] args) {
 		ArgumentNullException.ThrowIfNull(func, nameof(func));
 
-		ConcurrentDictionary<string, object?> argumentsMap = _methodsMap.GetOrAdd(func, _ => new());
+		LimitedConcurrentDict<string, object?> argumentsMap = _methodsMap.GetOrAdd(func, _ => new(MaxEntriesPerMethod));
 
 		string key = GetArgumentsString(args);
 

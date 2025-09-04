@@ -21,7 +21,7 @@ public interface IComponentManager {
 	void AddComponent(IComponent component) {
 
 
-		Components.TryGetValue(typeof(component.type))
+		Components.TryGetValue(typeof(component.type));
 
 
 
