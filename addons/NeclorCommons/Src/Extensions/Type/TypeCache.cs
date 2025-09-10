@@ -49,7 +49,7 @@ public static class TypeCache {
 		return GetAllTypes(typeof(T));
 	}
 
-	private record class TypeCacheEntry {
+	private class TypeCacheEntry {
 		public Type[]? interfaces;
 		public Type[]? baseTypes;
 		public Type[]? allTypes;
