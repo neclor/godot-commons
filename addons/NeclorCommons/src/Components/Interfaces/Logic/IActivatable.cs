@@ -3,9 +3,7 @@ namespace Neclor.Commons.Components.Interfaces;
 
 public interface IActivatable {
 
-
 	bool IsActive { get; set; }
-
 
 	void SetIsActive(bool value) {
 		IsActive = value;

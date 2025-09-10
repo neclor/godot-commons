@@ -1,82 +1,128 @@
-using System.Collections.ObjectModel;
+using Godot;
+using Neclor.Commons.Extensions;
+using Neclor.Commons.Utils;
+using System;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+
 
 namespace Neclor.Commons.Components.Interfaces.Core;
 
 
 public interface IComponentManager {
 
+	protected Dictionary<Type, List<IComponent>> ComponentsMap { get; }
 
-	protected abstract Dictionary<Type, List<IComponent>> Components { get; }
+	void Add<T>(T component) where T : IComponent {
+		ArgumentNullException.ThrowIfNull(component);
 
+		if (Contains(component)) throw new ArgumentException("The component is already added.", nameof(component));
 
-
-	ReadOnlyCollection<T> GetComponent<T>() where T : IComponent {
-		return new ReadOnlyCollection<T>(
-			Components.TryGetValue(typeof(T), out List<IComponent>? list) ? list.Cast<T>().ToList() : new List<T>()
-		);
+		AddToComponentsMap(component);
 	}
 
+	bool TryAdd<T>(T component) where T : IComponent {
+		ArgumentNullException.ThrowIfNull(component);
 
-	void AddComponent(IComponent component) {
+		if (Contains(component)) return false;
 
+		AddToComponentsMap(component);
 
-		Components.TryGetValue(typeof(component.type));
-
-
-
-		component.ComponentOwner = this;
+		return true;
 	}
 
+	bool Contains<T>(T component) where T : IComponent {
+		ArgumentNullException.ThrowIfNull(component);
 
-	bool HasComponent<T>() where T : IComponent;
-
-
-
-	bool RemoveComponent<T>() where T : class, IComponent;
-
-
-
-
-
-	extension(object obj) {
-
-
-
-
+		return ComponentsMap.TryGetValue(typeof(T), out List<IComponent>? componentList) && componentList.Contains(component);
 	}
 
-	public static List<Type> GetAllTypes(object obj) {
-		if (obj == null) throw new ArgumentNullException(nameof(obj));
+	bool ContainsType<T>() where T : IComponent {
+		return ComponentsMap.TryGetValue(typeof(T), out List<IComponent>? componentList) && componentList.Count > 0;
+	}
 
-		var result = new List<Type>();
-		Type type = obj.GetType();
+	bool Remove<T>(T component) where T : IComponent {
+		ArgumentNullException.ThrowIfNull(component);
 
-		// Добавляем сам тип
-		result.Add(type);
-
-		// Добавляем базовые классы
-		Type current = type.BaseType;
-		while (current != null) {
-			result.Add(current);
-			current = current.BaseType;
+		if (ComponentsMap.TryGetValue(typeof(T), out List<IComponent>? componentList) && componentList.Remove(component)) {
+			component.ComponentRemoved(this);
+			ComponentRemoved(component);
+			return true;
 		}
 
-		// Добавляем интерфейсы (уникальные)
-		foreach (var iface in type.GetInterfaces()) {
-			if (!result.Contains(iface))
-				result.Add(iface);
-		}
-
-		return result;
+		return false;
 	}
 
+	/* 
+	 
+	 		List<IComponent>? componentList;
+		if (!ComponentsMap.TryGetValue(typeof(T), out componentList)) {
+			component = default;
+			return false;
+		}
+
+		if (componentList.Count < 1) {
+			component = default;
+			return false;
+		}
+
+		component = (T)componentList[0];
+		return true;
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 */
+
+
+
+
+	bool TryGetComponent<T>([MaybeNullWhen(false)] out T component) where T : IComponent {
 
 
 
 
 
+		if (ComponentsMap.TryGetValue(typeof(T), out List<IComponent>? componentList) && componentList.Count > 0) {
 
 
 
+		}
+
+		component = default;
+		return false;
+
+
+	}
+
+	T[] TryGetComponents<T>([MaybeNullWhen(false)] out T[] component) where T : IComponent {
+
+		List<IComponent>? componentList;
+		if (!Components.TryGetValue(typeof(T), out componentSet)) return null;
+
+
+
+	}
+
+	void ComponentAdded(IComponent сomponentManager) { }
+
+	void ComponentRemoved(IComponent сomponentManager) { }
+
+
+	private void AddToComponentsMap<T>(T component) where T : IComponent {
+		foreach (Type type in TypeCache<T>.GetAllTypes()) {
+			if (!ComponentsMap.TryGetValue(type, out List<IComponent>? componentList)) ComponentsMap[type] = componentList = [];
+			componentList.Add(component);
+		}
+
+		component.ComponentAdded(this);
+		ComponentAdded(component);
+	}
 }

@@ -1,4 +1,4 @@
-﻿#if GODOT
+#if GODOT
 using Godot;
 using System;
 using Vector2 = Godot.Vector2;
@@ -14,8 +14,6 @@ using Vector4 = System.Numerics.Vector4;
 namespace Neclor.Commons.Extensions;
 
 
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1034:Nested types should not be visible")]
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1822:Mark members as static")]
 public static class Vector2Extensions {
 
 #if GODOT
@@ -24,6 +22,7 @@ public static class Vector2Extensions {
 
 	private static readonly Vector2 _isometric_projection = new Vector2(1, 0.5f);
 
+#pragma warning disable CA1034, CA1822
 	extension(Vector2 v) {
 
 #if GODOT
@@ -46,5 +45,6 @@ public static class Vector2Extensions {
 			return (v / projection).Normalized() * projection;
 		}
 	}
+#pragma warning restore CA1034, CA1822
 }
 

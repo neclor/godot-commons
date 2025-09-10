@@ -4,7 +4,6 @@ using Neclor.Commons.Lib;
 namespace Neclor.Commons.Extensions;
 
 
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1034:Nested types should not be visible")]
 public static class DoubleExtensions {
 
 	const double ThirdTau = double.Tau / 3;
@@ -14,6 +13,7 @@ public static class DoubleExtensions {
 	const double MinAngle = -double.Pi;
 	const double MaxAngle = double.Pi;
 
+#pragma warning disable CA1034
 	extension(double d) {
 
 		public static double ThirdTau => ThirdTau;
@@ -38,12 +38,9 @@ public static class DoubleExtensions {
 			return MathLib.WrapAngle(angle);
 		}
 
-		public static double WrapAngleDegrees(double angle) {
-			return MathLib.WrapAngleDegrees(angle);
-		}
-
 		public static double DecayWeight(double decay, double delta) {
 			return MathLib.DecayWeight(decay, delta);
 		}
 	}
+#pragma warning restore CA1034
 }

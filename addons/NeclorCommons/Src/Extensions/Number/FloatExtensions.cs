@@ -4,7 +4,6 @@ using Neclor.Commons.Lib;
 namespace Neclor.Commons.Extensions;
 
 
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1034:Nested types should not be visible")]
 public static class FloatExtensions {
 
 	const float ThirdTau = float.Tau / 3;
@@ -14,6 +13,7 @@ public static class FloatExtensions {
 	const float MinAngle = -float.Pi;
 	const float MaxAngle = float.Pi;
 
+#pragma warning disable CA1034
 	extension(float f) {
 
 		public static float ThirdTau => ThirdTau;
@@ -38,16 +38,9 @@ public static class FloatExtensions {
 			return MathLib.WrapAngle(angle);
 		}	
 
-		public static float WrapAngleDegrees(float angle) {
-			return MathLib.WrapAngleDegrees(angle);
-		}
-
 		public static float DecayWeight(float decay, float delta) {
 			return MathLib.DecayWeight(decay, delta);
 		}
-
-		public static float DecayWeight(float decay, double delta) {
-			return MathLib.DecayWeight(decay, delta);
-		}
 	}
+#pragma warning restore CA1034
 }
