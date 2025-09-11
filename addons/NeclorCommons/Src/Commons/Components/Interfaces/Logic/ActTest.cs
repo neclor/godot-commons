@@ -28,12 +28,19 @@ public partial class ActTest : Node, IActivatable {
 	[Signal]
 	public delegate void ActivatedSignalEventHandler(bool value);
 
-	void foo() {
+
+
+	void Foo() {
+
 
 
 		this.Activate();
 
+
 	}
+
+
+
 
 
 
@@ -41,9 +48,7 @@ public partial class ActTest : Node, IActivatable {
 		((IActivatable)this).SetIsActive(value);
 	}
 
-	void Activate() {
-		((IActivatable)this).Activate();
-	}
+
 
 	void Deactivate() {
 		((IActivatable)this).Deactivate();

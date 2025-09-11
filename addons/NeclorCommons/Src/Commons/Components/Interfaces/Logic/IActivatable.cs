@@ -13,7 +13,7 @@ public interface IActivatable {
 		IsActive = true;
 	}
 
-	void Deactivate() {
+	public void Deactivate() {
 		IsActive = false;
 	}
 
