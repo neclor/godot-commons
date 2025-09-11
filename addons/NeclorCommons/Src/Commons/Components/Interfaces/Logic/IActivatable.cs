@@ -16,4 +16,10 @@ public interface IActivatable {
 	void Deactivate() {
 		IsActive = false;
 	}
+
+	void IsActiveChanged(bool value) { }
+
+	void Activated() { }
+
+	void Deactivated() { }
 }

@@ -23,13 +23,8 @@ public static class TypeExtensions {
 			return baseTypes.ToArray();
 		}
 
-		public IReadOnlyList<Type> GetAllTypes() {
-			//List<Type> allTypes = [];
-
-
-
-			return [];
-			//return t.GetInterfaces().Concat(t.GetBaseTypes()).ToArray()
+		public Type[] GetAllTypes() {
+			return t.GetInterfaces().Append(t).Concat(t.GetBaseTypes()).ToArray();
 		}
 	}
 #pragma warning restore CA1034, CA1822

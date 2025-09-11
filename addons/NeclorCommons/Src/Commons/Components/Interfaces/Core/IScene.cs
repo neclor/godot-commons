@@ -4,6 +4,7 @@ using Godot;
 namespace Neclor.Commons.Components.Interfaces.Core;
 
 
+#pragma warning disable CA1000
 public interface IScene<TSelf> where TSelf : Node, IScene<TSelf> {
 
 	static abstract string ScenePath { get; }
@@ -12,3 +13,4 @@ public interface IScene<TSelf> where TSelf : Node, IScene<TSelf> {
 		return GD.Load<PackedScene>(TSelf.ScenePath).Instantiate<TSelf>();
 	}
 }
+#pragma warning restore CA1000
