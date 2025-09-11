@@ -28,9 +28,7 @@
     <NoWarn>$(NoWarn);CA1515</NoWarn>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="addons\NeclorCommons\Src\Generator\Generator.csproj" />
-  </ItemGroup>
+
 
   <ItemGroup>
     <Compile Remove="addons\NeclorCommons\Src\Generator\**" />

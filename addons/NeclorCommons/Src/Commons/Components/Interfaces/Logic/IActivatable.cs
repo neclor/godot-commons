@@ -5,11 +5,11 @@ public interface IActivatable {
 
 	bool IsActive { get; set; }
 
-	void SetIsActive(bool value) {
+	public void SetIsActive(bool value) {
 		IsActive = value;
 	}
 
-	void Activate() {
+	public void Activate() {
 		IsActive = true;
 	}
 

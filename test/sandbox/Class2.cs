@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Neclor.Commons.test.sandbox;
-partial class Class1 {
+static partial class Class1 {
 
 
 

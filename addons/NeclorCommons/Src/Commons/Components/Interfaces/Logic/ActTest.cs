@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Godot;
+
 namespace Neclor.Commons.Interfaces;
 
 
-public class ActTest : IActivatable {
+public partial class ActTest : Node, IActivatable {
 
 
 	public bool IsActive {
@@ -23,14 +25,38 @@ public class ActTest : IActivatable {
 		}
 	}
 
-
-
+	[Signal]
+	public delegate void ActivatedSignalEventHandler(bool value);
 
 	void foo() {
 
 
-		
+		this.Activate();
 
 	}
+
+
+
+	void SetIsActive(bool value) {
+		((IActivatable)this).SetIsActive(value);
+	}
+
+	void Activate() {
+		((IActivatable)this).Activate();
+	}
+
+	void Deactivate() {
+		((IActivatable)this).Deactivate();
+	}
+
+	void IsActiveChanged(bool value) {
+
+		EmitSignal(SignalName.ActivatedSignal, value);
+	}
+
+	void Activated() { }
+
+	void Deactivated() { }
+
 
 }
