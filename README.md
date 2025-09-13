@@ -1,2 +1,2 @@
 # Common
-Frequently used scripts, systems and utilities for Godot.
+Frequently used scripts, systems and utilities.
