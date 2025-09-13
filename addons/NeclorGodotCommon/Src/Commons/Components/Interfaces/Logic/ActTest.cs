@@ -34,7 +34,7 @@ public partial class ActTest : Node, IActivatable {
 
 
 
-		this.Activate();
+		Activate();
 
 
 	}
