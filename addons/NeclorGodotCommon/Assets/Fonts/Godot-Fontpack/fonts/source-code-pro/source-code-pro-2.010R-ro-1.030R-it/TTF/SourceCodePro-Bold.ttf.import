@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dr3lonbqm0b2m"
-path="res://.godot/imported/SourceCodePro-Bold.ttf-0284b70a7e2e0b8f9dc18718c5b1b652.fontdata"
+path="res://.godot/imported/SourceCodePro-Bold.ttf-498a8a48752ce65b37dcbb1eea18056e.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/Assets/Fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf"
-dest_files=["res://.godot/imported/SourceCodePro-Bold.ttf-0284b70a7e2e0b8f9dc18718c5b1b652.fontdata"]
+source_file="res://addons/NeclorGodotCommon/Assets/Fonts/Godot-Fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf"
+dest_files=["res://.godot/imported/SourceCodePro-Bold.ttf-498a8a48752ce65b37dcbb1eea18056e.fontdata"]
 
 [params]
 

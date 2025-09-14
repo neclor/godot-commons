@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4dem01xjh4cs"
-path="res://.godot/imported/icon.png-5c668110b3836f7e7377837477193a6f.ctex"
+path="res://.godot/imported/icon.png-8f509e3789e6bfbfbaf810a5a2f8cbbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/NeclorCommons/Assets/Fonts/Godot-Fontpack/icon.png"
-dest_files=["res://.godot/imported/icon.png-5c668110b3836f7e7377837477193a6f.ctex"]
+source_file="res://addons/NeclorGodotCommon/Assets/Fonts/Godot-Fontpack/icon.png"
+dest_files=["res://.godot/imported/icon.png-8f509e3789e6bfbfbaf810a5a2f8cbbc.ctex"]
 
 [params]
 

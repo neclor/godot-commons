@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://du21nva3pa30j"
-path="res://.godot/imported/neclor_logo.png-447dc97c18b5f4926b26dab5f1a89611.ctex"
+path="res://.godot/imported/neclor_logo.png-a15627b4b21bbb7a7c6eb7f85f6d19eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/NeclorCommons/Assets/Sprites/Logo/neclor_logo.png"
-dest_files=["res://.godot/imported/neclor_logo.png-447dc97c18b5f4926b26dab5f1a89611.ctex"]
+source_file="res://addons/NeclorGodotCommon/Assets/Sprites/Logo/neclor_logo.png"
+dest_files=["res://.godot/imported/neclor_logo.png-a15627b4b21bbb7a7c6eb7f85f6d19eb.ctex"]
 
 [params]
 

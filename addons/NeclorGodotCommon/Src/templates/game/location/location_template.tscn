@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmi1y5efks24p"]
+
+[ext_resource type="Script" uid="uid://c5frr64n8xyce" path="res://addons/NeclorGodotCommon/Src/templates/game/location/location_template.gd" id="1_5op3k"]
+[ext_resource type="PackedScene" uid="uid://6h2o3uuwgaeu" path="res://addons/NeclorGodotCommon/Src/templates/ui/elements/background_canvas_layer/background_canvas_layer.tscn" id="2_f2pms"]
+
+[sub_resource type="Environment" id="Environment_5op3k"]
+
+[node name="LocationTemplate" type="Node2D"]
+script = ExtResource("1_5op3k")
+
+[node name="BackgroundCanvasLayer" parent="." instance=ExtResource("2_f2pms")]
+layer = -64
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5op3k")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+enabled = false
+
+[node name="TileMapContainer" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="BackgroundLayer" type="TileMapLayer" parent="TileMapContainer"]
+unique_name_in_owner = true
+
+[node name="TerrainLayer" type="TileMapLayer" parent="TileMapContainer"]
+unique_name_in_owner = true
+
+[node name="ObjectLayer" type="TileMapLayer" parent="TileMapContainer"]
+unique_name_in_owner = true
+
+[node name="EntityContainer" type="Node2D" parent="."]
+unique_name_in_owner = true

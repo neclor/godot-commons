@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://b8c6gdysopdng"]
 
-[ext_resource type="Script" uid="uid://yuh430tnhq4a" path="res://addons/NeclorCommons/Src/Components/Scripts/input/input_component.gd" id="1_qqgw4"]
+[ext_resource type="Script" uid="uid://yuh430tnhq4a" path="res://addons/NeclorGodotCommon/Src/Components/Scripts/input/input_component.gd" id="1_qqgw4"]
 [ext_resource type="Script" path="res://addons/NeclorCommons/src/Components/scripts/transform/move/character_2d/top_down_character_2d_move_component.gd" id="2_wvbbu"]
-[ext_resource type="PackedScene" uid="uid://bg444ytatrfp3" path="res://addons/NeclorCommons/Src/Components/Scenes/camera/Camera2DSceneComponent.tscn" id="3_wvbbu"]
+[ext_resource type="PackedScene" uid="uid://bg444ytatrfp3" path="res://addons/NeclorGodotCommon/Src/Components/Scenes/camera/Camera2DSceneComponent.tscn" id="3_wvbbu"]
 [ext_resource type="Script" path="res://addons/NeclorCommons/src/Components/scripts/transform/rotation/rotation_2d_component.gd" id="4_eyhaa"]
-[ext_resource type="PackedScene" uid="uid://dbufhnpdmtis1" path="res://addons/NeclorCommons/Src/Components/Scenes/sprite/sprite_2d_scene_component.tscn" id="4_f04xs"]
+[ext_resource type="PackedScene" uid="uid://dbufhnpdmtis1" path="res://addons/NeclorGodotCommon/Src/Components/Scenes/sprite/sprite_2d_scene_component.tscn" id="4_f04xs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jp3oe"]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bk20m6a7ycle0"
-path="res://.godot/imported/KiriFont.otf-b5ef4c101d59453a22cb00772d1478a2.fontdata"
+path="res://.godot/imported/KiriFont.otf-d3f9e548af8fbbc04411bbecc98e40ec.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/Assets/Fonts/Godot-Fontpack/fonts/kirifont/KiriFont.otf"
-dest_files=["res://.godot/imported/KiriFont.otf-b5ef4c101d59453a22cb00772d1478a2.fontdata"]
+source_file="res://addons/NeclorGodotCommon/Assets/Fonts/Godot-Fontpack/fonts/kirifont/KiriFont.otf"
+dest_files=["res://.godot/imported/KiriFont.otf-d3f9e548af8fbbc04411bbecc98e40ec.fontdata"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dcxj5eq7dx4cx"
-path="res://.godot/imported/cmuntt.ttf-d835662b03149dacdc3b8930b8dfcf5a.fontdata"
+path="res://.godot/imported/cmuntt.ttf-019bcddd564f377ddad0851e57e15706.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/Assets/Fonts/Godot-Fontpack/fonts/cmu-typewriter/Typewriter/cmuntt.ttf"
-dest_files=["res://.godot/imported/cmuntt.ttf-d835662b03149dacdc3b8930b8dfcf5a.fontdata"]
+source_file="res://addons/NeclorGodotCommon/Assets/Fonts/Godot-Fontpack/fonts/cmu-typewriter/Typewriter/cmuntt.ttf"
+dest_files=["res://.godot/imported/cmuntt.ttf-019bcddd564f377ddad0851e57e15706.fontdata"]
 
 [params]
 

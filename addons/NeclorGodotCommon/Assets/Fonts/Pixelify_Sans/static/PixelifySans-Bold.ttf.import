@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cq2xcayqgaeld"
-path="res://.godot/imported/PixelifySans-Bold.ttf-39123a2a89bdd4a757053bae02c9d381.fontdata"
+path="res://.godot/imported/PixelifySans-Bold.ttf-e2040f63a6b94cb8218876ad3b4a0080.fontdata"
 
 [deps]
 
-source_file="res://addons/NeclorCommons/Assets/Fonts/Pixelify_Sans/static/PixelifySans-Bold.ttf"
-dest_files=["res://.godot/imported/PixelifySans-Bold.ttf-39123a2a89bdd4a757053bae02c9d381.fontdata"]
+source_file="res://addons/NeclorGodotCommon/Assets/Fonts/Pixelify_Sans/static/PixelifySans-Bold.ttf"
+dest_files=["res://.godot/imported/PixelifySans-Bold.ttf-e2040f63a6b94cb8218876ad3b4a0080.fontdata"]
 
 [params]
 

@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Godot.NET.Sdk/4.5.0-beta.5">
-
+  
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    
+    <OutputType>Library</OutputType>
     <TargetFramework>net9.0</TargetFramework>
     <LangVersion>preview</LangVersion>
 
@@ -14,44 +13,12 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
 
-    <RootNamespace>Neclor.Commons</RootNamespace>
-
-    <Authors>neclor</Authors>
-    <Product>NeclorCommonsProject</Product>
-
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <FileVersion>1.0.0</FileVersion>
+    <RootNamespace>Neclor.Godot.Common.Project</RootNamespace>
   </PropertyGroup>
-
-  <PropertyGroup>
-    <NoWarn>$(NoWarn);CA1515</NoWarn>
-  </PropertyGroup>
-
-
-
-  <ItemGroup>
-    <Compile Remove="addons\NeclorCommons\Src\Generator\**" />
-    <EmbeddedResource Remove="addons\NeclorCommons\Src\Generator\**" />
-  </ItemGroup>
   
   <ItemGroup>
-    <Compile Remove="addons\NeclorCommons\Src\Commons\Components\Scenes\**" />
-    <Compile Remove="addons\NeclorCommons\Src\Commons\Components\Scripts\**" />
-    <Compile Remove="addons\NeclorCommons\Src\Commons\Components\Scenes\**" />
-    <Compile Remove="addons\NeclorCommons\Src\Commons\Components\Scripts\**" />
-    <Compile Remove="addons\NeclorCommons\Src\Commons\Lib\tools\**" />
-    <Compile Remove="addons\NeclorCommons\Src\Commons\Lib\utils\**" />
-    <Compile Remove="addons\NeclorCommons\Src\Commons\managers\**" />
-    <Compile Remove="addons\NeclorCommons\Src\Commons\templates\**" />
-    <EmbeddedResource Remove="addons\NeclorCommons\Src\Commons\Components\Scenes\**" />
-    <EmbeddedResource Remove="addons\NeclorCommons\Src\Commons\Components\Scripts\**" />
-    <EmbeddedResource Remove="addons\NeclorCommons\Src\Commons\Components\Scenes\**" />
-    <EmbeddedResource Remove="addons\NeclorCommons\Src\Commons\Components\Scripts\**" />
-    <EmbeddedResource Remove="addons\NeclorCommons\Src\Commons\Lib\tools\**" />
-    <EmbeddedResource Remove="addons\NeclorCommons\Src\Commons\Lib\utils\**" />
-    <EmbeddedResource Remove="addons\NeclorCommons\Src\Commons\managers\**" />
-    <EmbeddedResource Remove="addons\NeclorCommons\Src\Commons\templates\**" />
+    <Compile Remove="addons\**" />
+    <EmbeddedResource Remove="addons\**" />
   </ItemGroup>
-
+  
 </Project>
