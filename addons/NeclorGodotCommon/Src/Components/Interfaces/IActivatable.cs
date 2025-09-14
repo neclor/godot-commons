@@ -11,9 +11,9 @@ public interface IActivatable {
 
 	void Deactivate();
 
-	protected void IsActiveChanged(bool value);
+	protected void OnIsActiveChanged(bool value);
 
-	protected void Activated();
+	protected void OnActivated();
 
-	protected void Deactivated();
+	protected void OnDeactivated();
 }

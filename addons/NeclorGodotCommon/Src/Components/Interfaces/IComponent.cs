@@ -1,4 +1,4 @@
-namespace Neclor.Commons.Components.Interfaces.Core;
+namespace Neclor.Godot.Common.Components.Interfaces;
 
 
 public interface IComponent {

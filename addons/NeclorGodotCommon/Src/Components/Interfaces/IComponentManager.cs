@@ -1,8 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
-using Neclor.Commons.Extensions;
+using Neclor.Common.Extensions;
 
 
-namespace Neclor.Commons.Components.Interfaces.Core;
+namespace Neclor.Godot.Common.Components.Interfaces;
 
 
 public interface IComponentManager {
