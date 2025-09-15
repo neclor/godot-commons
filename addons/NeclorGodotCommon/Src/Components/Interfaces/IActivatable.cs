@@ -7,13 +7,13 @@ public interface IActivatable {
 
 	void SetIsActive(bool value);
 
-	void Activate();
+	void Activate() {
+
+		Console.WriteLine("ssss");
+
+	}
 
 	void Deactivate();
 
-	protected void OnIsActiveChanged(bool value);
-
 	protected void OnActivated();
-
-	protected void OnDeactivated();
 }

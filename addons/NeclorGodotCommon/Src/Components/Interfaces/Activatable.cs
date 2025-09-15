@@ -16,10 +16,6 @@ public class Activatable : IActivatable {
 		set {
 			if (field == value) return;
 			field = value;
-
-			OnIsActiveChanged(field);
-			if (field) OnActivated();
-			else OnDeactivated();
 		}
 	} = true;
 
@@ -27,22 +23,16 @@ public class Activatable : IActivatable {
 		IsActive = value;
 	}
 
-	public void Activate() {
-		IsActive = true;
-	}
+
 
 	public void Deactivate() {
 		IsActive = false;
 	}
 
-	protected void OnIsActiveChanged(bool value) { }
+	public void OnActivated() {
+		Console.WriteLine("dddadd");
 
-	protected void OnActivated() { }
-
-	protected void OnDeactivated() { }
-
-
-	event Action? Activated;
+	}
 
 
 }

@@ -6,11 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Godot;
+using Neclor.Godot.Common.Components;
 
 namespace Neclor.Commons.Interfaces;
 
 
-public partial class ActTest : Node, IActivatable {
+public partial class ActTest : Node {
 
 
 	public bool IsActive {
@@ -33,35 +34,14 @@ public partial class ActTest : Node, IActivatable {
 	void Foo() {
 
 
+		IActivatable a = new Activatable();
 
-		Activate();
-
+		a.Activate();
 
 	}
 
 
 
-
-
-
-	void SetIsActive(bool value) {
-		((IActivatable)this).SetIsActive(value);
-	}
-
-
-
-	void Deactivate() {
-		((IActivatable)this).Deactivate();
-	}
-
-	void IsActiveChanged(bool value) {
-
-		EmitSignal(SignalName.ActivatedSignal, value);
-	}
-
-	void Activated() { }
-
-	void Deactivated() { }
 
 
 }
